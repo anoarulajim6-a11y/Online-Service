@@ -1,173 +1,2152 @@
 <!DOCTYPE html>
-<html lang="bn">
+<html lang="bn" dir="ltr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Online Service-এর জন্য ওয়েবসাইট</title>
-    <link href="https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@400;600&display=swap" rel="stylesheet">
+    <title>Online Services - আপনার সম্পূর্ণ অনলাইন সমাধান</title>
+    
+    <meta name="description" content="Online Services - A-Z অনলাইন সার্ভিস, ভিসা প্রসেসিং, ফ্লাইট বুকিং, আকামা, জাওয়াজাত। সকল সমস্যার অনলাইন সমাধান।">
+    <meta name="keywords" content="Online Services, ভিসা প্রসেসিং, ফ্লাইট বুকিং, অনলাইন সার্ভিস, ট্রাভেল এজেন্সি, আকামা, জাওয়াজাত, কিওয়া, কপালা">
+    <meta name="author" content="Online Services">
+    <meta name="robots" content="index, follow">
+    
+    <meta property="og:title" content="Online Services - আপনার সম্পূর্ণ অনলাইন সমাধান">
+    <meta property="og:description" content="A-Z অনলাইন সার্ভিস, ভিসা প্রসেসিং, ফ্লাইট বুকিং, আকামা, জাওয়াজাত">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://i.postimg.cc/k4PknVys/Round-Photo-Nov292025-012428.png">
+    <meta property="og:url" content="https://online-services.com">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://i.postimg.cc/k4PknVys/Round-Photo-Nov292025-012428.png">
+    
+    <meta http-equiv="Content-Security-Policy" 
+          content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://www.googletagmanager.com https://www.google-analytics.com https://connect.facebook.net; 
+                   style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; 
+                   font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com;
+                   img-src 'self' data: https:; connect-src 'self' https://online-services.com;
+                   frame-src 'self' https://www.google.com https://maps.google.com https://www.googleusercontent.com; 
+                   ">
+    <meta http-equiv="X-XSS-Protection" content="1; mode=block">
+    
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#0A2E50">
+    <link rel="apple-touch-icon" href="https://i.postimg.cc/k4PknVys/Round-Photo-Nov292025-012428.png">
+    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@400;700;900&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
     
     <style>
-        /* পুরো পেজের জন্য স্টাইল */
-        body {
-            font-family: 'Baloo Da 2', sans-serif;
-            background-color: #f4f7f6; /* হালকা ব্যাকগ্রাউন্ড */
-            color: #333;
+        /* --- Updated CSS Variables for Online Services --- */
+        :root {
+            --primary-dark-blue: #0A2E50;
+            --secondary-blue: #1A5276;
+            --accent-light-blue: #40B4D3;
+            --text-dark: #333333;
+            --text-light: #F8F8F8;
+            --shadow-light: 0 4px 15px rgba(0,0,0,0.08);
+            --shadow-medium: 0 8px 25px rgba(0,0,0,0.15);
+            --shadow-heavy: 0 12px 30px rgba(0,0,0,0.25);
+            --border-radius: 10px;
+            --transition: all 0.3s ease;
+            
+            /* Offer-specific colors */
+            --offer-green: #4CAF50;
+            --offer-text-white: #FFFFFF;
+            --offer-price-color: #E60000;
+            --offer-border-color: #61A464;
+        }
+
+        /* --- LTR Base Styles --- */
+        html[dir="ltr"] {
+            text-align: left;
+        }
+
+        .stat-icons {
+            margin-bottom: 5px;
+            height: 12px; 
             display: flex;
             justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            margin: 0;
-            text-align: center;
-            padding: 20px; /* মোবাইল ডিভাইসের জন্য প্যাডিং */
         }
 
-        /* কন্টেইনার (Container) */
-        .container {
-            background-color: #ffffff;
-            padding: 40px;
-            border-radius: 12px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-            max-width: 600px;
-            width: 100%;
+        .stat-icons i {
+            font-size: 0.8em; 
+            color: var(--accent-light-blue);
+            margin-left: 3px;
         }
 
-        /* কোম্পানির নামের স্টাইল */
-        .company-name {
-            color: #007bff; /* নীল রং */
-            font-size: 2.5em;
-            margin-bottom: 20px;
-            border-bottom: 2px solid #007bff;
-            display: inline-block;
-            padding-bottom: 5px;
-        }
+        /* --- Utility Styles (Cookie/WhatsApp/BackToTop) --- */
 
-        /* বার্তার স্টাইল */
-        .message {
-            font-size: 1.2em;
-            line-height: 1.6;
-            margin-bottom: 15px;
-        }
-
-        .message-footer {
-            font-size: 1.1em;
-            font-weight: 600;
-            color: #555;
-            margin-bottom: 30px;
-        }
-
-        /* বাটন কন্টেইনার */
-        .button-container {
+        .cookie-banner {
+            display: none;
+            position: fixed;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            background: var(--primary-dark-blue);
+            color: var(--text-light);
+            padding: 15px 25px;
+            box-shadow: 0 -2px 10px rgba(0,0,0,0.2);
+            z-index: 10000;
             display: flex;
-            flex-direction: column; /* ছোট স্ক্রিনে নিচে নিচে থাকবে */
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.9em;
             gap: 15px;
-            margin-top: 25px;
+            border-top: 3px solid var(--accent-light-blue);
         }
 
-        /* বাটনের সাধারণ স্টাইল */
-        .whatsapp-btn, .call-btn {
-            padding: 15px 30px;
+        .cookie-banner p {
+            margin: 0;
+            flex-grow: 1;
+            text-align: inherit;
+        }
+
+        .cookie-banner .cta-button {
+            flex-shrink: 0;
+            padding: 10px 20px;
+            font-size: 0.9em;
+            margin-top: 0;
+            background: var(--accent-light-blue);
+            color: var(--primary-dark-blue);
+        }
+        .cookie-banner .cta-button:hover {
+            background: var(--secondary-blue);
+            color: var(--text-light);
+        }
+
+        .back-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: var(--accent-light-blue);
+            color: var(--primary-dark-blue);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            cursor: pointer;
+            box-shadow: var(--shadow-medium);
+            transition: var(--transition);
+            z-index: 999;
+        }
+
+        .back-to-top.show {
+            display: flex;
+        }
+
+        .back-to-top:hover {
+            background: var(--secondary-blue);
+            color: var(--text-light);
+            transform: translateY(-5px);
+        }
+
+        .whatsapp-float {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            background: var(--offer-green);
+            color: white;
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            cursor: pointer;
+            box-shadow: var(--shadow-heavy);
+            transition: var(--transition);
+            z-index: 998;
+        }
+
+        .whatsapp-float:hover {
+            background: #43A047;
+            transform: scale(1.1) rotate(5deg);
+        }
+
+        .whatsapp-widget {
+            display: none;
+            position: fixed;
+            bottom: 90px;
+            left: 20px;
+            width: 300px;
+            max-width: 90%;
+            background: white;
+            border-radius: 15px;
+            box-shadow: var(--shadow-heavy);
+            z-index: 997;
+            overflow: hidden;
+            font-family: 'Noto Sans Arabic', sans-serif;
+        }
+
+        .chat-header {
+            background: var(--primary-dark-blue);
+            color: white;
+            padding: 15px;
+            font-weight: 700;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .chat-header button {
+            background: none;
             border: none;
+            color: white;
+            font-size: 24px;
+            cursor: pointer;
+            line-height: 1;
+        }
+
+        .chat-body {
+            padding: 20px;
+            text-align: inherit;
+        }
+
+        .chat-body p {
+            margin-bottom: 15px;
+            color: var(--text-dark);
+        }
+
+        .quick-replies {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .quick-replies button {
+            background: #f0f0f0;
+            color: var(--primary-dark-blue);
+            border: 1px solid #ccc;
+            padding: 10px;
             border-radius: 8px;
             cursor: pointer;
-            font-size: 1em;
+            text-align: inherit;
+            transition: var(--transition);
+            font-family: 'Noto Sans Arabic', sans-serif;
+            font-size: 0.9em;
+        }
+
+        .quick-replies button:hover {
+            background: var(--primary-dark-blue);
+            color: white;
+            border-color: var(--primary-dark-blue);
+        }
+
+        .notification {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            padding: 15px 50px 15px 20px;
+            border-radius: 10px;
+            color: white;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            z-index: 10001;
+            opacity: 0;
+            transform: translateY(-20px);
+            transition: all 0.3s ease-out;
+            max-width: 80%;
+            text-align: inherit;
+        }
+
+        .notification.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .notification.success {
+            background: var(--offer-green);
+        }
+
+        .notification.error {
+            background: var(--offer-price-color);
+        }
+
+        .notification.info {
+            background: var(--primary-dark-blue);
+        }
+        
+        /* New: Sticky Contact Bar Styles */
+        #stickyContactBar {
+            display: none !important; /* Hide initially to manage display with JS */
+        }
+        
+        /* New: Flash Offer Animation */
+        @keyframes pulse {
+            0% { transform: scale(1); box-shadow: 0 4px 15px rgba(0,0,0,0.2); }
+            50% { transform: scale(1.01); box-shadow: 0 4px 20px rgba(255,165,0,0.5); }
+            100% { transform: scale(1); box-shadow: 0 4px 15px rgba(0,0,0,0.2); }
+        }
+
+        /* --- Smooth Scrolling --- */
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 80px;
+        }
+
+        /* --- Basic Styling --- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Noto Sans Arabic', sans-serif;
+            background-color: var(--text-light);
+            color: var(--text-dark);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        section {
+            padding: 80px 0;
+        }
+
+        h2 {
+            text-align: center;
+            color: var(--primary-dark-blue);
+            font-size: 2.5em;
+            margin-bottom: 50px;
+            border-bottom: 3px solid var(--accent-light-blue);
+            display: inline-block;
+            padding-bottom: 10px;
+            font-weight: 900;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+        }
+
+        /* --- Header & Navigation --- */
+        header {
+            padding: 30px 0 20px;
+            background: linear-gradient(135deg, var(--primary-dark-blue) 0%, var(--secondary-blue) 100%);
+            color: white;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+            text-align: center;
+            backdrop-filter: blur(10px);
+            transition: var(--transition);
+        }
+
+        .header-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .logo-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 5px 0 5px 0;
+            z-index: 1001;
+            position: relative;
+        }
+
+        .logo-container img {
+            height: 60px;
+            width: auto;
+            border-radius: 12px;
+            margin-bottom: 5px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            transition: var(--transition);
+        }
+
+        .logo-container img:hover {
+            transform: scale(1.05);
+        }
+
+        .logo-container .logo-text {
+            font-size: 1.4em;
+            font-weight: 900;
+            color: var(--accent-light-blue);
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            letter-spacing: 0.5px;
+            padding: 0 5px;
+            background: none;
+            line-height: 1.1;
+            white-space: nowrap;
+        }
+
+        .contact-bar { 
+            text-align: center;
+            margin-top: 0;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .contact-bar a { 
+            color: white;
+            text-decoration: none;
             font-weight: 700;
-            transition: background-color 0.3s, transform 0.1s;
+            transition: var(--transition);
+            padding: 8px 16px;
+            border-radius: 25px;
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+        }
+
+        .contact-bar a:hover {
+            color: var(--accent-light-blue);
+            background: rgba(255,255,255,0.2);
+            transform: translateY(-2px);
+        }
+
+        .whatsapp-icon { 
+            color: var(--offer-green);
+        }
+
+        /* --- Language Buttons --- */
+        .lang-switcher {
+            font-size: 1em;
+            margin-bottom: 8px;
+            width: 100%;
+            text-align: center;
+        }
+
+        .lang-button {
+            background-color: rgba(255, 255, 255, 0.15);
+            color: white;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            padding: 6px 12px;
+            border-radius: 20px;
+            text-decoration: none;
+            margin: 0 5px;
+            transition: var(--transition);
+            cursor: pointer;
+            font-weight: 700;
+            backdrop-filter: blur(10px);
+        }
+
+        .lang-button:hover, .lang-button.active {
+            background-color: var(--accent-light-blue);
+            color: var(--primary-dark-blue);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(64,180,211,0.3);
+        }
+
+        /* --- Hero Section --- */
+        #hero {
+            background: linear-gradient(135deg, rgba(10,46,80,0.9) 0%, rgba(64,180,211,0.8) 100%), url('https://images.unsplash.com/photo-1542831371-29b0f74f94c5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80') no-repeat center center/cover;
+            color: white;
+            text-align: center;
+            padding: 120px 15px;
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        #hero h1 { 
+            font-size: 3.5em;
+            margin-bottom: 20px;
+            font-weight: 900;
+            text-shadow: 3px 3px 6px rgba(0,0,0,0.8);
+            line-height: 1.2;
+        }
+
+        #hero p {
+            font-size: 1.3em;
+            font-weight: 700;
+            max-width: 800px;
+            margin: 0 auto 30px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
+            line-height: 1.6;
+        }
+
+        /* --- CTA Buttons --- */
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--accent-light-blue) 0%, var(--secondary-blue) 100%);
+            color: var(--primary-dark-blue);
+            padding: 18px 45px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-size: 1.4em;
+            font-weight: 900;
+            transition: var(--transition);
+            margin-top: 30px;
+            box-shadow: 0 8px 25px rgba(64,180,211,0.4);
+            border: none;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-button:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+            transition: 0.5s;
+        }
+
+        .cta-button:hover:before {
+            right: 100%;
+        }
+
+        .cta-button:hover {
+            background: linear-gradient(135deg, var(--secondary-blue) 0%, var(--primary-dark-blue) 100%);
+            box-shadow: 0 12px 35px rgba(64,180,211,0.6);
+            transform: translateY(-5px) scale(1.05);
+        }
+
+        /* --- Offer Badge --- */
+        @keyframes flash { 
+            0%, 50%, 100% { 
+                opacity: 1;
+                transform: scale(1);
+            } 
+            25%, 75% { 
+                opacity: 0.7;
+                transform: scale(1.05);
+            } 
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+            40% {transform: translateY(-10px);}
+            60% {transform: translateY(-5px);}
+        }
+
+        .offer-badge {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: linear-gradient(135deg, var(--offer-green) 0%, var(--offer-border-color) 100%);
+            color: var(--offer-text-white);
+            padding: 12px 20px;
+            border-radius: 50px;
+            font-weight: 900;
+            font-size: 1.1em;
+            animation: flash 2s infinite, bounce 3s infinite;
+            z-index: 10;
+            box-shadow: 0 4px 15px rgba(76,175,80,0.4);
+        }
+        
+        /* Modal Style for Extra Services */
+        #extraServicesModal > div, #contactModal > div {
+            background: white; max-width: 700px; margin: 50px auto; padding: 30px; border-radius: 20px; box-shadow: var(--shadow-heavy); position: relative; border-top: 5px solid var(--accent-light-blue);
+        }
+        
+        #contactModal .modal-option-btn {
             display: flex;
             align-items: center;
             justify-content: center;
-            text-decoration: none;
-            color: white;
-            width: 100%; /* সম্পূর্ণ প্রস্থ জুড়ে বাটন */
-        }
-
-        /* হোয়াটসঅ্যাপ বাটনের স্টাইল */
-        .whatsapp-btn {
-            background-color: #25D366;
-        }
-
-        .whatsapp-btn:hover {
-            background-color: #128C7E;
-            transform: translateY(-2px);
-        }
-
-        /* কল বাটনের স্টাইল */
-        .call-btn {
-            background-color: #ff6347;
-        }
-
-        .call-btn:hover {
-            background-color: #e55337;
-            transform: translateY(-2px);
-        }
-
-        /* আইকনের স্টাইল */
-        .icon {
-            margin-right: 10px;
+            padding: 15px 25px;
+            border-radius: 12px;
             font-size: 1.2em;
+            font-weight: 700;
+            cursor: pointer;
+            transition: var(--transition);
+            color: white;
+            border: none;
+            width: 100%;
+            margin-bottom: 15px;
+            gap: 10px;
         }
 
-        /* বড় স্ক্রিনের জন্য স্টাইল */
-        @media (min-width: 500px) {
-            .button-container {
-                flex-direction: row; /* পাশাপাশি থাকবে */
+        #contactModal .modal-option-btn.whatsapp-btn {
+            background: linear-gradient(135deg, var(--offer-green) 0%, var(--offer-border-color) 100%);
+        }
+
+        #contactModal .modal-option-btn.email-btn {
+            background: linear-gradient(135deg, var(--primary-dark-blue) 0%, var(--secondary-blue) 100%);
+        }
+
+        #contactModal .modal-option-btn:hover {
+            opacity: 0.9;
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-medium);
+        }
+        
+        @media (max-width: 768px) {
+            #extraServicesModal > div, #contactModal > div {
+                margin: 20px auto;
+                max-width: 90%;
+            }
+            #extraServicesModal ul {
+                padding-right: 15px; /* RTL fix for lists */
+            }
+            #extraServicesModal div[style*="grid"] {
+                grid-template-columns: 1fr !important;
+            }
+            #extraServicesModal .package-cta {
+                font-size: 1em !important;
+            }
+        }
+
+        /* --- Stats Section --- */
+        #stats { 
+            background: linear-gradient(135deg, var(--primary-dark-blue) 0%, var(--secondary-blue) 100%);
+            color: white;
+            text-align: center;
+            padding: 40px 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: flex-start;
+            position: relative;
+            overflow: hidden;
+            gap: 10px;
+        }
+
+        #stats:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><path d="M0,0 L100,0 L100,100 Z" fill="rgba(255,255,255,0.05)"/></svg>');
+            background-size: cover;
+        }
+
+        .stat-item { 
+            padding: 15px 10px;
+            position: relative;
+            z-index: 2;
+            flex: 1 1 calc(33.33% - 10px);
+            max-width: calc(33.33% - 10px);
+            text-align: center;
+            margin: 10px 0;
+            box-sizing: border-box;
+        }
+
+        .stat-number { 
+            font-size: 3.5em;
+            font-weight: 900;
+            color: var(--accent-light-blue);
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            line-height: 1.1;
+        }
+
+        .stat-text {
+            font-size: 1.3em;
+            font-weight: 700;
+            opacity: 0.9;
+        }
+
+        /* --- Why Choose Us Section --- */
+        #why-us {
+             background: #FFFFFF;
+             padding: 80px 0;
+        }
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .feature-card { 
+            padding: 30px;
+            border: none;
+            border-radius: 20px;
+            box-shadow: var(--shadow-light);
+            transition: var(--transition);
+            background: white;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .feature-card:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(135deg, var(--accent-light-blue) 0%, var(--primary-dark-blue) 100%);
+        }
+
+        .feature-card:hover { 
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: var(--shadow-heavy);
+        }
+
+        .feature-card i {
+            font-size: 3em;
+            color: var(--accent-light-blue);
+            background: linear-gradient(135deg, var(--accent-light-blue) 0%, var(--primary-dark-blue) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* --- Packages Section --- */
+        #services {
+             background: #f0f8ff;
+             padding: 80px 0;
+        }
+        .packages-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .package-card {
+            border: none;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: var(--shadow-medium);
+            text-align: left;
+            transition: var(--transition);
+            background: white;
+            position: relative;
+        }
+
+        .package-card:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(135deg, var(--accent-light-blue) 0%, var(--primary-dark-blue) 100%);
+            z-index: 2;
+        }
+
+        .package-card:hover { 
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: var(--shadow-heavy);
+        }
+
+        .package-card img { 
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+
+        .package-card:hover img {
+            transform: scale(1.1);
+        }
+
+        .package-content { 
+            padding: 25px;
+        }
+
+        .package-content h4 { 
+            color: var(--primary-dark-blue);
+            font-size: 1.6em;
+            margin-top: 0;
+            margin-bottom: 15px;
+            font-weight: 900;
+        }
+
+        .price { 
+            font-size: 2.2em;
+            color: var(--offer-price-color);
+            font-weight: 900;
+            margin-bottom: 15px;
+            background: linear-gradient(135deg, var(--offer-price-color) 0%, #CC0000 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .package-content ul { 
+            list-style: none;
+            padding: 0;
+            margin: 20px 0;
+        }
+
+        .package-content li { 
+            margin-bottom: 12px;
+            font-size: 1em;
+            display: flex;
+            align-items: flex-start;
+            padding: 8px 0;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .package-content li:last-child {
+            border-bottom: none;
+        }
+
+        .package-content li i {
+            margin-right: 12px;
+            color: #00B894; /* উজ্জ্বল সবুজ */
+            min-width: 20px;
+            font-size: 1.1em;
+        }
+
+        .package-cta {
+            background: linear-gradient(135deg, var(--offer-green) 0%, var(--offer-border-color) 100%);
+            color: white;
+            display: block;
+            text-align: center;
+            padding: 15px;
+            text-decoration: none;
+            font-weight: 700;
+            transition: var(--transition);
+            border-radius: 10px;
+            margin-top: 20px;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            font-size: 1.1em;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .package-cta:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+            transition: 0.5s;
+        }
+
+        .package-cta:hover:before {
+            right: 100%;
+        }
+
+        .package-cta:hover { 
+            background: linear-gradient(135deg, var(--offer-border-color) 0%, var(--offer-green) 100%);
+            box-shadow: 0 6px 20px rgba(76,175,80,0.4);
+            transform: translateY(-3px);
+        }
+
+        /* --- Testimonials Section --- */
+        #testimonials {
+            background: linear-gradient(135deg, #f7fcff 0%, #e0f2f7 100%);
+            border-top: 5px solid var(--accent-light-blue);
+            box-shadow: 0 0 30px rgba(0,0,0,0.1);
+            position: relative;
+        }
+
+        #testimonials:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><path d="M0,100 L100,0 L100,100 Z" fill="rgba(64,180,211,0.05)"/></svg>');
+            background-size: cover;
+        }
+
+        #testimonials .quote-box {
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            font-style: italic;
+            margin-bottom: 30px;
+            box-shadow: var(--shadow-medium);
+            position: relative;
+            z-index: 2;
+            border-left: 5px solid var(--accent-light-blue);
+        }
+
+        #testimonials .quote-box:before {
+            content: """;
+            font-size: 80px;
+            color: var(--accent-light-blue);
+            position: absolute;
+            top: -20px;
+            left: 20px;
+            opacity: 0.2;
+            font-family: serif;
+        }
+
+        /* --- Contact Section --- */
+        #contact { 
+            background: linear-gradient(135deg, var(--primary-dark-blue) 0%, #000 100%);
+            color: white;
+            text-align: center;
+            position: relative;
+        }
+
+        #contact:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><path d="M0,0 L100,100 L0,100 Z" fill="rgba(64,180,211,0.1)"/></svg>');
+            background-size: cover;
+        }
+
+        #contact .container {
+            position: relative;
+            z-index: 2;
+        }
+
+        #contact input, #contact select, #contact textarea {
+            width: 100%;
+            padding: 15px;
+            margin-bottom: 15px;
+            border: none;
+            border-radius: 10px;
+            box-sizing: border-box;
+            font-family: 'Noto Sans Arabic', sans-serif;
+            font-size: 1em;
+            background: rgba(255,255,255,0.95);
+            transition: var(--transition);
+            text-align: left;
+            color: var(--text-dark);
+        }
+
+        #contact input:focus, #contact select:focus, #contact textarea:focus {
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(64,180,211,0.5);
+            transform: translateY(-2px);
+        }
+
+        #contact button[type="button"] { /* Changed to type=button */
+            padding: 15px 30px;
+            background: linear-gradient(135deg, var(--accent-light-blue) 0%, var(--secondary-blue) 100%);
+            color: var(--primary-dark-blue);
+            border: none;
+            border-radius: 10px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: var(--transition);
+            font-size: 1.2em;
+            width: 100%;
+            position: relative;
+            overflow: hidden;
+        }
+
+        #contact button[type="button"]:hover { 
+            background: linear-gradient(135deg, var(--secondary-blue) 0%, var(--primary-dark-blue) 100%);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(64,180,211,0.4);
+        }
+
+        .contact-info {
+            margin: 30px 0;
+            text-align: center;
+        }
+
+        .contact-info p {
+            margin: 15px 0;
+            font-size: 1.2em;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        #map-frame {
+            width: 100%;
+            height: 400px;
+            border: 0;
+            border-radius: 15px;
+            margin: 25px 0;
+            box-shadow: var(--shadow-medium);
+        }
+
+        .map-link {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--offer-green) 0%, var(--offer-border-color) 100%);
+            color: white;
+            padding: 12px 25px;
+            text-decoration: none;
+            border-radius: 25px;
+            margin-top: 15px;
+            transition: var(--transition);
+            font-weight: 700;
+        }
+
+        .map-link:hover {
+            background: linear-gradient(135deg, var(--offer-border-color) 0%, var(--offer-green) 100%);
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(76,175,80,0.4);
+        }
+
+        /* --- Footer --- */
+        footer { 
+            background: linear-gradient(135deg, #212121 0%, #000 100%);
+            color: #aaa;
+            text-align: center;
+            padding: 40px 0 20px;
+            font-size: 0.9em;
+            position: relative;
+        }
+
+        footer:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(135deg, var(--accent-light-blue) 0%, var(--primary-dark-blue) 100%);
+        }
+
+        .dev-info { 
+            color: var(--accent-light-blue);
+            margin-top: 10px;
+            font-weight: 700;
+            font-size: 1em;
+        }
+
+        /* --- Trust Seal --- */
+        .trust-seal {
+            background: linear-gradient(135deg, var(--offer-green) 0%, var(--offer-border-color) 100%);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 25px;
+            font-weight: 700;
+            display: inline-block;
+            margin-top: 20px;
+            box-shadow: 0 4px 15px rgba(76,175,80,0.3);
+            animation: bounce 3s infinite;
+        }
+
+        /* --- Mobile Adjustments --- */
+        @media (max-width: 768px) {
+            #hero h1 { font-size: 2.2em; }
+            #hero p { font-size: 1.1em; }
+            
+            header {
+                padding: 35px 0 20px;
+            }
+            .header-content {
+                gap: 5px;
+            }
+            .logo-container {
+                margin-top: 5px;
+            }
+            .logo-container img {
+                height: 50px;
+                margin-bottom: 0px;
+            }
+            .logo-container .logo-text {
+                font-size: 1.2em;
+            }
+            .contact-bar {
+                margin-top: 5px;
+                gap: 8px;
+                flex-direction: row;
                 justify-content: center;
             }
-            .whatsapp-btn, .call-btn {
-                width: auto; /* কন্টেন্ট অনুযায়ী প্রস্থ */
+            .contact-bar a { 
+                padding: 6px 12px;
+                font-size: 0.9em;
+            }
+            .lang-switcher { 
+                font-size: 0.9em;
+                margin-bottom: 0;
+            }
+            
+            .stat-item { 
+                flex: 1 1 calc(33.33% - 10px);
+                max-width: calc(33.33% - 10px);
+                padding: 10px 5px;
+                text-align: center;
+            }
+            .stat-number { 
+                font-size: 2.2em;
+            }
+            .stat-text {
+                font-size: 0.9em;
+            }
+            
+            .offer-badge { 
+                position: static;
+                margin-bottom: 20px;
+                display: inline-block;
+                font-size: 0.9em;
+            }
+            .feature-card { 
+                width: 100%;
+                max-width: 100%;
+                padding: 20px;
+            }
+            h2 { 
+                font-size: 1.8em;
+                margin-bottom: 30px;
+            }
+            
+            .packages-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            
+            .package-card {
+                margin-bottom: 20px;
+            }
+            
+            .whatsapp-widget {
+                width: calc(100% - 40px);
+                right: 20px;
+                left: 20px;
+                bottom: 80px;
+            }
+            
+            .whatsapp-float {
+                width: 60px;
+                height: 60px;
+                bottom: 20px;
+                left: 20px;
+                font-size: 24px;
+            }
+            
+            .back-to-top {
+                bottom: 90px;
+                right: 20px;
+                width: 45px;
+                height: 45px;
+                font-size: 18px;
+            }
+            
+            section {
+                padding: 50px 0;
+            }
+            
+            .container {
+                width: 95%;
+                padding: 0 10px;
+            }
+            
+            #stickyContactBar a {
+                padding: 6px 10px !important;
+                font-size: 0.9em;
             }
         }
     </style>
-    </head>
+</head>
 <body>
-    <div class="container">
-        <h1 class="company-name">Online Service</h1>
-        <div class="content-box">
-            <p class="message">
-                স্বাগতম! আমরা আপনার জন্য অপেক্ষা করতেছিলাম। আমাদের টিম পরিশ্রম করে আপনার কোম্পানি **Online Service** এর জন্য একটি ওয়েবসাইট তৈরি করেছে।
-            </p>
-            <p class="message-footer">
-                যদি আপনি এই ওয়েবসাইটটির কাজ সম্পূর্ণ করতে চান, যোগাযোগ করতে পারেন:
-            </p>
 
-            <div class="button-container">
-                <button class="whatsapp-btn" id="whatsappButton">
-                    <span class="icon">💬</span> WhatsApp-এ যোগাযোগ করুন
-                </button>
-                
-                <button class="call-btn" id="callButton">
-                    <span class="icon">📞</span> এখনই কল করুন
-                </button>
+    <div id="cookieConsent" class="cookie-banner">
+        <p data-ar="نستخدم ملفات تعريف الارتباط لتحسين تجربتك. باستخدام هذا الموقع، فإنك تقبل سياستنا للكوكيز." 
+           data-en="We use cookies to enhance your experience. By using this site you accept our cookie policy." 
+           data-bn="আমরা আপনার অভিজ্ঞতা উন্নত করতে কুকি ব্যবহার করি। এই সাইট ব্যবহার করে আপনি আমাদের কুকি নীতি মেনে নিচ্ছেন।">
+           আমরা আপনার অভিজ্ঞতা উন্নত করতে কুকি ব্যবহার করি। এই সাইট ব্যবহার করে আপনি আমাদের কুকি নীতি মেনে নিচ্ছেন।
+        </p>
+        <button id="acceptCookies" class="cta-button" data-ar="قبول" data-en="Accept" data-bn="স্বীকার করুন">স্বীকার করুন</button>
+    </div>
+
+    <div class="back-to-top" id="backToTop">
+        <i class="fas fa-chevron-up"></i>
+    </div>
+
+    <div class="whatsapp-float" id="whatsappFloat">
+        <i class="fab fa-whatsapp"></i>
+    </div>
+
+    <div id="whatsapp-widget" class="whatsapp-widget">
+        <div class="chat-header">
+            <span data-ar="تحدث معنا" data-en="Chat with us" data-bn="আমাদের সাথে চ্যাট করুন">আমাদের সাথে চ্যাট করুন</span>
+            <button id="close-chat">×</button>
+        </div>
+        <div class="chat-body">
+            <p data-ar="كيف يمكننا مساعدتك؟" data-en="How can we help you?" data-bn="কীভাবে আমরা আপনাকে সাহায্য করতে পারি?">কীভাবে আমরা আপনাকে সাহায্য করতে পারি?</p>
+            <div class="quick-replies">
+                <button data-message="আমি আকামা/জাওয়াজাত সার্ভিস সম্পর্কে জানতে চাই" data-ar="🛂 خدمات الإقامة والجوازات" data-en="🛂 Iqama/Jawazat Services" data-bn="🛂 আকামা/জাওয়াজাত সার্ভিস">🛂 আকামা/জাওয়াজাত সার্ভিস</button>
+                <button data-message="আমি অনলাইন সার্ভিস সম্পর্কে জানতে চাই" data-ar="💻 الخدمات الإلكترونية" data-en="💻 Online Services" data-bn="💻 অনলাইন সার্ভিস">💻 অনলাইন সার্ভিস</button>
+                <button data-message="আমি ভিসা প্রসেসিং সম্পর্কে জানতে চাই" data-ar="✈️ التأشيرات" data-en="✈️ Visa Processing" data-bn="✈️ ভিসা প্রসেসিং">✈️ ভিসা প্রসেসিং</button>
+                <button data-message="আমি ফ্লাইট টিকেট সম্পর্কে জানতে চাই" data-ar="🗺️ تذاكر الطيران" data-en="🗺️ Air Tickets" data-bn="🗺️ বিমান টিকেট">🗺️ বিমান টিকেট</button>
             </div>
         </div>
     </div>
-    
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const whatsappButton = document.getElementById('whatsappButton');
-            const callButton = document.getElementById('callButton');
 
-            // আপনার ফোন নম্বর এবং কোম্পানির নাম
-            const phoneNumber = '0531267825'; 
-            const companyName = 'Online Service';
+    <header>
+        <div class="container">
+            <div class="header-content"> 
+                <div class="lang-switcher">
+                    <a href="#" class="lang-button" data-lang="bn" aria-label="বাংলা ভাষায় পরিবর্তন করুন">বাংলা</a>
+                    <a href="#" class="lang-button" data-lang="en" aria-label="Change to English">English</a>
+                    <a href="#" class="lang-button" data-lang="ar" aria-label="التغيير إلى العربية">العربية</a>
+                </div>
+                
+                <div class="logo-container"> 
+                    <img src="https://i.postimg.cc/Hs44RFFP/Round-Photo-Nov292025-210153.png" alt="Online Services লোগো" loading="eager">
+                    <span class="logo-text" data-ar="أونلاين سيرفيس" data-en="Online Services" data-bn="অনলাইন সার্ভিসেস">অনলাইন সার্ভিসেস</span>
+                </div>
+                <div class="contact-bar">
+                    <a href="tel:+966500371908" style="color: var(--accent-light-blue); background: rgba(64,180,211,0.1);">
+                        <i class="fas fa-phone"></i> কল করুন: 0500371908 / 0506243320
+                    </a>
+                    <a href="https://wa.me/966500371908" target="_blank" aria-label="WhatsApp এ মেসেজ করুন" style="background: rgba(76,175,80,0.1);">
+                        <span class="whatsapp-icon"><i class="fab fa-whatsapp"></i></span> WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
 
-            // অটোমেটিক মেসেজ (URL-এর জন্য এনকোড করা)
-            const autoMessage = encodeURIComponent(`আমি ${companyName} এর ওয়েবসাইট টি নিয়ে কাজ করার অনুরোধ জানাতে যোগাযোগ করেছি।`);
+    <div id="flashOfferBar" style="background: linear-gradient(90deg, #FFD700 0%, #FFA500 100%); color: var(--primary-dark-blue); text-align: center; padding: 12px 0; font-weight: 900; font-size: 1.2em; box-shadow: 0 4px 15px rgba(0,0,0,0.2); animation: pulse 2s infinite;">
+        <div class="container">
+            <i class="fas fa-bolt" style="margin-right: 10px; color: #E60000;"></i> 
+            <span data-bn="🎉 আজকের জন্য বিশেষ ছাড়! দ্রুত যোগাযোগ করুন:" data-en="🎉 Special Discount Today! Contact quickly:" data-ar="🎉 خصم خاص اليوم! تواصل بسرعة:">🎉 আজকের জন্য বিশেষ ছাড়! দ্রুত যোগাযোগ করুন:</span> 
+            <span id="countdownTimer" style="margin-left: 10px; color: #E60000;">00:00:00</span>
+            <i class="fas fa-bolt" style="margin-left: 10px; color: #E60000;"></i>
+        </div>
+    </div>
+    <section id="hero">
+        <div class="container">
+            <div class="offer-badge" data-ar="✨ عرض خاص لجميع العملاء!" data-en="✨ Special Offer for All Clients!" data-bn="✨ সকল ক্লায়েন্টদের জন্য বিশেষ অফার!">✨ সকল ক্লায়েন্টদের জন্য বিশেষ অফার!</div>
+            <h1 data-ar="من الخدمات الإلكترونية إلى حلول السفر: جميع احتياجاتك تحت سقف واحد" data-en="From Online Services to Travel Solutions: All Your Needs Under One Roof" data-bn="অনলাইন সার্ভিস থেকে ভ্রমণ সমাধান: আপনার সকল চাহিদা এক ছাদের নিচে">অনলাইন সার্ভিস থেকে ভ্রমণ সমাধান: আপনার সকল চাহিদা এক ছাদের নিচে</h1>
+            <p data-ar="متخصصون في الخدمات الإلكترونية من الألف إلى الياء 🇪🇺 | تأشيرات السفر ✈️ | حجوزات الطيران 🗺️ | خدمات الإقامة والجوازات 🛂. نحل جميع المشكلات عبر الإنترنت." data-en="A-Z Online Services Experts 🇪🇺 | Travel Visas ✈️ | Flight Bookings 🗺️ | Iqama & Jawazat Services 🛂. We solve all problems online." data-bn="এ টু জেড অনলাইন সার্ভিস 🇪🇺 | ট্রাভেল ভিসা ✈️ | ফ্লাইট বুকিং 🗺️ | আকামা ও জাওয়াজাত সার্ভিস 🛂। আমরা যেকোনো সমস্যার অনলাইন সমাধান করি।">এ টু জেড অনলাইন সার্ভিস 🇪🇺 | ট্রাভেল ভিসা ✈️ | ফ্লাইট বুকিং 🗺️ | আকামা ও জাওয়াজাত সার্ভিস 🛂। আমরা যেকোনো সমস্যার অনলাইন সমাধান করি।</p>
+            <a href="#services" class="cta-button" data-ar="استعرض جميع خدماتنا" data-en="View All Our Services" data-bn="আমাদের সকল সার্ভিস দেখুন">আমাদের সকল সার্ভিস দেখুন</a>
             
-            // হোয়াটসঅ্যাপের লিংক তৈরি করা
-            const whatsappLink = `https://wa.me/${phoneNumber}?text=${autoMessage}`;
+            <div class="trust-seal" data-ar="مزود خدمات إلكترونية وسفر موثوق" data-en="Trusted Online & Travel Service Provider" data-bn="বিশ্বস্ত অনলাইন ও ভ্রমণ সার্ভিস প্রদানকারী">বিশ্বস্ত অনলাইন ও ভ্রমণ সার্ভিস প্রদানকারী</div>
+        </div>
+    </section>
+    
+    <section id="stats">
+        <div class="container" style="display:flex; justify-content: space-between;">
+            
+            <div class="stat-item">
+                <div class="stat-number">2850+</div>
+                <div class="stat-icons"> 
+                    <i class="fas fa-check-circle"></i>
+                    <i class="fas fa-check-circle"></i>
+                    <i class="fas fa-check-circle"></i>
+                </div>
+                <div class="stat-text" data-ar="معاملة ناجحة" data-en="Successful Processing" data-bn="সফল প্রসেসিং">সফল প্রসেসিং</div>
+            </div>
 
-            // হোয়াটসঅ্যাপ বাটনে ক্লিক ইভেন্ট
-            whatsappButton.addEventListener('click', function() {
-                // হোয়াটসঅ্যাপে রিডাইরেক্ট করবে
-                window.location.href = whatsappLink;
+            <div class="stat-item">
+                <div class="stat-number">100%</div>
+                <div class="stat-icons"> 
+                    <i class="fas fa-star"></i>
+                </div>
+                <div class="stat-text" data-ar="معدل الرضا" data-en="Satisfaction Rate" data-bn="সন্তুষ্টির হার">সন্তুষ্টির হার</div>
+            </div>
+
+            <div class="stat-item">
+                <div class="stat-number">24/7</div>
+                <div class="stat-icons"> 
+                    <i class="fas fa-headset"></i>
+                </div>
+                <div class="stat-text" data-ar="الدعم" data-en="Support" data-bn="সাপোর্ট">সাপোর্ট</div>
+            </div>
+            
+        </div>
+    </section>
+
+    <section id="why-us" class="container">
+        <h2 style="margin: auto;" data-ar="لماذا تختار Online Services؟" data-en="Why Choose Online Services?" data-bn="কেন Online Services বেছে নেবেন?">কেন Online Services বেছে নেবেন?</h2>
+        <div class="features-grid">
+            <div class="feature-card">
+                <i class="fas fa-id-card-alt"></i> <h3 style="color: var(--accent-light-blue); margin-bottom: 15px;"> <span data-ar="خدمات الإقامة والجوازات" data-en="Iqama & Jawazat Services" data-bn="আকামা ও জাওয়াজাত সার্ভিস">আকামা ও জাওয়াজাত সার্ভিস</span></h3>
+                <p data-ar="جميع خدمات الإقامة والتأشيرات والجوازات. حلول سريعة لأي مشكلة إلكترونية حكومية." data-en="All Iqama, Visa, and Jawazat services. Quick solutions for any government e-service issue." data-bn="সকল আকামা, ভিসা ও জাওয়াজাত সার্ভিস। যেকোনো সরকারি অনলাইন সমস্যার দ্রুত সমাধান।">সকল আকামা, ভিসা ও জাওয়াজাত সার্ভিস। যেকোনো সরকারি অনলাইন সমস্যার দ্রুত সমাধান।</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-laptop-code"></i>
+                <h3 style="color: var(--accent-light-blue); margin-bottom: 15px;"> <span data-ar="الخدمات الإلكترونية" data-en="Online Services" data-bn="অনলাইন সার্ভিস">অনলাইন সার্ভিস</span></h3>
+                <p data-ar="جميع الخدمات الإلكترونية من الألف إلى الياء. حلول مبتكرة وسريعة لجميع احتياجاتك." data-en="All online services from A to Z. Innovative and fast solutions for all your needs." data-bn="এ থেকে জেড পর্যন্ত সকল অনলাইন সার্ভিস। আপনার সকল চাহিদার জন্য উদ্ভাবনী ও দ্রুত সমাধান।">এ থেকে জেড পর্যন্ত সকল অনলাইন সার্ভিস। আপনার সকল চাহিদার জন্য উদ্ভাবনী ও দ্রুত সমাধান।</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-plane"></i>
+                <h3 style="color: var(--accent-light-blue); margin-bottom: 15px;"> <span data-ar="حجوزات الطيران والتأشيرات" data-en="Flight & Visa Services" data-bn="ফ্লাইট ও ভিসা সার্ভিস">ফ্লাইট ও ভিসা সার্ভিস</span></h3>
+                <p data-ar="أفضل عروض تذاكر الطيران وتأشيرات السفر. أسعار تنافسية وإجراءات مبسطة." data-en="Best flight ticket offers and travel visas. Competitive prices and simplified procedures." data-bn="সকল এয়ারলাইন্সের সেরা টিকেট অফার এবং ভিসা প্রসেসিং। প্রতিযোগিতামূলক মূল্য এবং সরলীকৃত প্রক্রিয়া।">সকল এয়ারলাইন্সের সেরা টিকেট অফার এবং ভিসা প্রসেসিং। প্রতিযোগিতামূলক মূল্য এবং সরলীকৃত প্রক্রিয়া।</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-headset"></i>
+                <h3 style="color: var(--accent-light-blue); margin-bottom: 15px;"> <span data-ar="الدعم المستمر" data-en="24/7 Support" data-bn="২৪/৭ সাপোর্ট">২৪/৭ সাপোর্ট</span></h3>
+                <p data-ar="دعم فوري على مدار الساعة طوال أيام الأسبوع. حلول سريعة لأي استفسار أو مشكلة." data-en="Instant support 24/7 throughout the week. Quick solutions for any inquiry or problem." data-bn="সারাদিন ২৪ ঘন্টা এবং সপ্তাহের ৭ দিনই সাপোর্ট সেবা। যে কোনো সমস্যার দ্রুত সমাধান।">সারাদিন ২৪ ঘন্টা এবং সপ্তাহের ৭ দিনই সাপোর্ট সেবা। যে কোনো সমস্যার দ্রুত সমাধান।</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="services">
+        <div class="container">
+            <h2 style="margin: auto;" data-ar="🧳 باقات خدماتنا المتخصصة" data-en="🧳 Our Specialized Service Packages" data-bn="🧳 আমাদের বিশেষায়িত সার্ভিস প্যাকেজ">🧳 আমাদের বিশেষায়িত সার্ভিস প্যাকেজ</h2>
+
+            <div class="packages-grid"> 
+
+                <div class="package-card"> 
+                    <img src="https://images.unsplash.com/photo-1488085061387-422e29b40080?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="ভিসা প্রসেসিং" loading="lazy">
+                    <div class="package-content">
+                        <h4 data-ar="🛂 باقة معالجة التأشيرات الشاملة" data-en="🛂 Comprehensive Visa Processing Package" data-bn="🛂 কমপ্লিট ভিসা প্রসেসিং প্যাকেজ">🛂 কমপ্লিট ভিসা প্রসেসিং প্যাকেজ</h4>
+                        <p class="price" data-ar="اتصل للتفاصيل" data-en="Contact for Details" data-bn="বিস্তারিত জানতে যোগাযোগ করুন">বিস্তারিত জানতে যোগাযোগ করুন</p>
+                        <ul>
+                            <li><i class="fas fa-file-alt"></i> <span data-ar="استشارة تأشيرة مجانية" data-en="Free Visa Consultation" data-bn="বিনামূল্যে ভিসা কনসাল্টেশন">বিনামূল্যে ভিসা কনসাল্টেশন</span></li>
+                            <li><i class="fas fa-passport"></i> <span data-ar="تجهيز ملف التقديم الكامل" data-en="Complete Application File Preparation" data-bn="সম্পূর্ণ অ্যাপ্লিকেশন ফাইল প্রস্তুত">সম্পূর্ণ অ্যাপ্লিকেশন ফাইল প্রস্তুত</span></li>
+                            <li><i class="fas fa-calendar-check"></i> <span data-ar="حجز موعد السفارة" data-en="Embassy Appointment Booking" data-bn="এম্বাসি অ্যাপয়েন্টমেন্ট বুকিং">এম্বাসি অ্যাপয়েন্টমেন্ট বুকিং</span></li>
+                            <li><i class="fas fa-shield-alt"></i> <span data-ar="تأمين سفر شامل" data-en="Comprehensive Travel Insurance" data-bn="সম্পূর্ণ ট্রাভেল ইন্স্যুরেন্স">সম্পূর্ণ ট্রাভেল ইন্স্যুরেন্স</span></li>
+                            <li><i class="fas fa-plane"></i> <span data-ar="حجز تذاكر الطيران" data-en="Flight Ticket Booking" data-bn="ফ্লাইট টিকেট বুকিং">ফ্লাইট টিকেট বুকিং</span></li>
+                        </ul>
+                        <button class="package-cta" onclick="window.open('https://wa.me/966500371908?text=আমি%20ভিসা%20প্রসেসিং%20প্যাকেজ%20সম্পর্কে%20জানতে%20চাই', '_blank')">
+                            <i class="fab fa-whatsapp"></i> <span data-ar="تواصل للاستفسار" data-en="Contact for Inquiry" data-bn="বিস্তারিত জানতে WhatsApp করুন">বিস্তারিত জানতে WhatsApp করুন</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="package-card">
+                    <img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="অনলাইন সার্ভিস" loading="lazy">
+                    <div class="package-content">
+                        <h4 data-ar="💻 باقة الخدمات الإلكترونية" data-en="💻 Online Services Package" data-bn="💻 অনলাইন সার্ভিস প্যাকেজ">💻 অনলাইন সার্ভিস প্যাকেজ</h4>
+                        <p class="price" data-ar="خصم خاص" data-en="Special Discount" data-bn="বিশেষ ছাড়">বিশেষ ছাড়</p>
+                        <ul>
+                            <li><i class="fas fa-desktop"></i> <span data-ar="جميع الخدمات الإلكترونية" data-en="All Online Services" data-bn="সকল অনলাইন সার্ভিস">সকল অনলাইন সার্ভিস</span></li>
+                            <li><i class="fas fa-mobile-alt"></i> <span data-ar="حلول الهاتف المحمول" data-en="Mobile Solutions" data-bn="মোবাইল সলিউশন">মোবাইল সলিউশন</span></li>
+                            <li><i class="fas fa-cloud"></i> <span data-ar="خدمات السحابة الإلكترونية" data-en="Cloud Services" data-bn="ক্লাউড সার্ভিস">ক্লাউড সার্ভিস</span></li>
+                            <li><i class="fas fa-tools"></i> <span data-ar="صيانة وإصلاح" data-en="Maintenance & Repair" data-bn="মেইনটেনেন্স ও রিপেয়ার">মেইনটেনেন্স ও রিপেয়ার</span></li>
+                            <li><i class="fas fa-rocket"></i> <span data-ar="حلول سريعة" data-en="Quick Solutions" data-bn="দ্রুত সমাধান">দ্রুত সমাধান</span></li>
+                        </ul>
+                        <button class="package-cta" onclick="window.open('https://wa.me/966500371908?text=আমি%20অনলাইন%20সার্ভিস%20প্যাকেজ%20সম্পর্কে%20জানতে%20চাই', '_blank')">
+                            <i class="fab fa-whatsapp"></i> <span data-ar="احجز واستفسر" data-en="Book & Inquire" data-bn="বুক করুন এবং জানুন">বুক করুন এবং জানুন</span>
+                        </button>
+                    </div>
+                </div>
+            
+            </div>
+            
+        </div>
+
+        <div class="container" style="text-align: center; margin-top: 50px;">
+            <button id="showAllServices" class="cta-button" style="background: linear-gradient(135deg, #E60000 0%, #CC0000 100%); color: white; box-shadow: 0 8px 25px rgba(230,0,0,0.4);"
+                data-bn="🔴 আকামা ও জাওয়াজাতের সকল জরুরি সার্ভিস দেখুন 🔴"
+                data-en="🔴 View All Urgent Iqama & Jawazat Services 🔴"
+                data-ar="🔴 شاهد جميع خدمات الإقامة والجوازات العاجلة 🔴">
+                🔴 আকামা ও জাওয়াজাতের সকল জরুরি সার্ভিস দেখুন 🔴
+            </button>
+        </div>
+        
+    </section>
+
+    <section id="testimonials" class="container">
+        <h2 style="margin: auto;" data-ar="آراء عملائنا الراضين" data-en="Reviews from Our Satisfied Clients" data-bn="আমাদের সন্তুষ্ট ক্লায়েন্টদের রিভিউ">আমাদের সন্তুষ্ট ক্লায়েন্টদের রিভিউ</h2>
+        <div class="quote-box">
+            <p class="translatable-text" data-ar="شكراً جزيلاً لـ Online Services على تسهيل عملية التأشيرة. كانت الخدمة احترافية وسريعة. أنصح الجميع بالتعامل معهم." data-en="Many thanks to Online Services for facilitating the visa process. The service was professional and fast. I recommend everyone to deal with them." data-bn="ভিসা প্রসেসিং এত সহজে করে দেওয়ার জন্য Online Services কে অসংখ্য ধন্যবাদ। তাদের সার্ভিস খুবই প্রফেশনাল এবং সময়নিষ্ঠ। সবার সাথে কাজ করার পরামর্শ দিচ্ছি।">"ভিসা প্রসেসিং এত সহজে করে দেওয়ার জন্য Online Services কে অসংখ্য ধন্যবাদ। তাদের সার্ভিস খুবই প্রফেশনাল এবং সময়নিষ্ঠ। সবার সাথে কাজ করার পরামর্শ দিচ্ছি।"</p>
+            <p style="font-weight: 700;">– <span class="translatable-text" data-ar="أحمد السديس، الرياض" data-en="Ahmed Al-Sudais, Riyadh" data-bn="আহমেদ আল-সুদাইস, রিয়াদ">আহমেদ আল-সুদাইস, রিয়াদ</span></p>
+        </div>
+        <div class="quote-box">
+            <p class="translatable-text" data-ar="الخدمات الإلكترونية كانت رائعة! فريق العمل محترف ويقدم دعم مستمر. شكراً لـ Online Services على هذه التجربة المميزة." data-en="The online services were amazing! The team is professional and provides continuous support. Thanks to Online Services for this exceptional experience." data-bn="অনলাইন সার্ভিসগুলো অসাধারণ ছিল! টিমটি খুব প্রফেশনাল এবং ক্রমাগত সাপোর্ট দেয়। এই ব্যতিক্রমী অভিজ্ঞতার জন্য Online Services কে ধন্যবাদ।">"অনলাইন সার্ভিসগুলো অসাধারণ ছিল! টিমটি খুব প্রফেশনাল এবং ক্রমাগত সাপোর্ট দেয়। এই ব্যতিক্রমী অভিজ্ঞতার জন্য Online Services কে ধন্যবাদ।"</p>
+            <p style="font-weight: 700;">– <span class="translatable-text" data-ar="فاطمة العتيبي، جدة" data-en="Fatima Al-Otaibi, Jeddah" data-bn="ফাতিমা আল-ওতাইবি, জেদ্দা">ফাতিমা আল-ওতাইবি, জেদ্দা</span></p>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <h2 style="margin: auto; color: white;" data-ar="اتصل بنا" data-en="Contact Us" data-bn="যোগাযোগ করুন">যোগাযোগ করুন</h2>
+            
+            <h3 style="color: white; border-bottom: 2px solid var(--accent-light-blue); padding-bottom: 15px; margin-top: 0; margin-bottom: 30px;" data-ar="📧 أرسل استفسارك" data-en="📧 Submit Your Inquiry" data-bn="📧 আপনার অনুসন্ধান পাঠান">📧 আপনার অনুসন্ধান পাঠান</h3>
+            
+            <form id="contact-form" style="max-width: 600px; margin: 20px auto; text-align: left;">
+                <input type="text" id="contactName" placeholder="আপনার পুরো নাম" required data-ar-placeholder="الاسم الكامل" data-en-placeholder="Your Full Name" data-bn-placeholder="আপনার পুরো নাম" aria-label="আপনার পুরো নাম">
+                <input type="email" id="contactEmail" placeholder="আপনার ইমেইল ঠিকানা (ঐচ্ছিক)" data-ar-placeholder="البريد الإلكتروني (اختياري)" data-en-placeholder="Your Email Address (Optional)" data-bn-placeholder="আপনার ইমেইল ঠিকানা (ঐচ্ছিক)" aria-label="আপনার ইমেইল ঠিকানা">
+                <input type="tel" id="contactPhone" placeholder="আপনার WhatsApp নম্বর (আবশ্যক)" required data-ar-placeholder="رقم الواتساب (مطلوب)" data-en-placeholder="Your WhatsApp Number (Required)" data-bn-placeholder="আপনার WhatsApp নম্বর (আবশ্যক)" aria-label="আপনার WhatsApp নম্বর">
+                
+                <select id="contactService" required aria-label="সার্ভিস নির্বাচন করুন">
+                    <option value="" data-ar="أي خدمة تحتاج؟ (*)" data-en="Which service do you need? (*)" data-bn="কোন সার্ভিসটি চান? (*)">কোন সার্ভিসটি চান? (*)</option>
+                    <option value="আকামা ও জাওয়াজাত সার্ভিস (জরুরী)" data-ar="خدمات الإقامة والجوازات (عاجل)" data-en="Iqama & Jawazat Services (Urgent)" data-bn="আকামা ও জাওয়াজাত সার্ভিস (জরুরী)">আকামা ও জাওয়াজাত সার্ভিস (জরুরী)</option>
+                    <option value="অনলাইন সার্ভিস" data-ar="الخدمات الإلكترونية" data-en="Online Services" data-bn="অনলাইন সার্ভিস">অনলাইন সার্ভিস</option>
+                    <option value="ভিসা প্রসেসিং" data-ar="معالجة التأشيرات" data-en="Visa Processing" data-bn="ভিসা প্রসেসিং">ভিসা প্রসেসিং</option>
+                    <option value="ফ্লাইট বুকিং" data-ar="حجوزات الطيران" data-en="Flight Booking" data-bn="ফ্লাইট বুকিং">ফ্লাইট বুকিং</option>
+                    <option value="অন্যান্য সার্ভিস" data-ar="خدمات أخرى" data-en="Other Services" data-bn="অন্যান্য সার্ভিস">অন্যান্য সার্ভিস</option>
+                </select>
+                
+                <textarea id="contactRequirements" placeholder="আপনার বিশেষ চাহিদা (যেমন: সার্ভিসের ধরন, তারিখ, সংখ্যা ইত্যাদি)" rows="5" data-ar-placeholder="متطلباتك الخاصة (مثل: نوع الخدمة، التواريخ، العدد)" data-en-placeholder="Your special requirements (e.g., service type, dates, quantity)" data-bn-placeholder="আপনার বিশেষ চাহিদা (যেমন: সার্ভিসের ধরন, তারিখ, সংখ্যা ইত্যাদি)" aria-label="আপনার বিশেষ চাহিদা"></textarea>
+                
+                <button type="button" id="showContactModalBtn" data-ar="اختر وسيلة التواصل" data-en="Choose Contact Method" data-bn="যোগাযোগের মাধ্যম নির্বাচন করুন">
+                    <span class="btn-text">যোগাযোগের মাধ্যম নির্বাচন করুন</span>
+                </button>
+            </form>
+
+            <p style="margin-top: 40px; font-size: 1.2em;" data-ar="أو قم بزيارة مكتبنا مباشرة:" data-en="Or visit our office directly:" data-bn="অথবা আমাদের অফিসে সরাসরি আসুন:">অথবা আমাদের অফিসে সরাসরি আসুন:</p>
+
+            <div class="contact-info">
+                <p><i class="fas fa-phone"></i> <span data-ar="الهاتف" data-en="Phone" data-bn="ফোন">ফোন</span>: 0500371908 / 0506243320</p>
+                <p><i class="fas fa-envelope"></i> <span data-ar="البريد الإلكتروني" data-en="Email" data-bn="ইমেইল">ইমেইল</span>: netservices16@gmail.com</p>
+                <p><i class="fas fa-map-marker-alt"></i> <span data-ar="العنوان" data-en="Address" data-bn="ঠিকানা">ঠিকানা</span>: <span data-ar="الرياض، حي الودي، الدواسر الخمسين - سوق الجوالات" data-en="Riyadh, Wadi Aldawase, Al-khamasen Mobile Market" data-bn="রিয়াদ, ওয়াদি আলদাওয়াসে, আল-খামাসেন মোবাইল মার্কেট">রিয়াদ, ওয়াদি আলদাওয়াসে, আল-খামাসেন মোবাইল মার্কেট</span></p>
+                <p><i class="fas fa-clock"></i> <span data-ar="المواعيد" data-en="Timing" data-bn="সময়">সময়</span>: <span data-ar="السبت-الخميس: 9 صباحاً - 6 مساءً" data-en="Sat-Thu: 9AM - 6PM" data-bn="শনি-বৃহস্পতিবার: সকাল ৯টা - সন্ধ্যা ৬টা">শনি-বৃহস্পতিবার: সকাল ৯টা - সন্ধ্যা ৬টা</span></p>
+            </div>
+            
+            <iframe id="map-frame" 
+                src="" 
+                allowfullscreen="" 
+                loading="lazy"
+                title="Online Services অফিস লোকেশন">
+            </iframe>
+            
+            <a class="map-link" 
+                href="" 
+                target="_blank" 
+                data-ar="التنقل على خرائط جوجل" 
+                data-en="Navigate on Google Maps" 
+                data-bn="Google Maps-এ নেভিগেট করুন">
+                <i class="fas fa-map-marked-alt"></i> Google Maps-এ নেভিগেট করুন
+            </a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p data-ar="© 2025 Online Services. جميع الحقوق محفوظة." data-en="© 2025 Online Services. All rights reserved." data-bn="© 2025 অনলাইন সার্ভিসেস। সকল স্বত্ব সংরক্ষিত।">© 2025 অনলাইন সার্ভিসেস। সকল স্বত্ব সংরক্ষিত।</p>
+            <p class="dev-info" data-ar="شريكك الموثوق للحلول الإلكترونية والسفر." data-en="Your trusted partner for online and travel solutions." data-bn="আপনার বিশ্বস্ত অনলাইন ও ভ্রমণ সমাধান সহযোগী।">আপনার বিশ্বস্ত অনলাইন ও ভ্রমণ সমাধান সহযোগী।</p>
+            
+            <div style="margin-top: 20px; display: flex; justify-content: center; gap: 15px;">
+                <a href="#" style="color: #aaa; text-decoration: none; transition: var(--transition);" onmouseover="this.style.color='var(--accent-light-blue)'" onmouseout="this.style.color='#aaa'" data-ar="سياسة الخصوصية" data-en="Privacy Policy" data-bn="গোপনীয়তা নীতি">গোপনীয়তা নীতি</a>
+                <span style="color: #666;">|</span>
+                <a href="#" style="color: #aaa; text-decoration: none; transition: var(--transition);" onmouseover="this.style.color='var(--accent-light-blue)'" onmouseout="this.style.color='#aaa'" data-ar="شروط الخدمة" data-en="Terms of Service" data-bn="সেবার শর্তাবলী">সেবার শর্তাবলী</a>
+                <span style="color: #666;">|</span>
+                <a href="#" style="color: #aaa; text-decoration: none; transition: var(--transition);" onmouseover="this.style.color='var(--accent-light-blue)'" onmouseout="this.style.color='#aaa'" data-ar="سياسة الاسترجاع" data-en="Refund Policy" data-bn="রিফান্ড পলিসি">রিফান্ড পলিসি</a>
+            </div>
+        </div>
+    </footer>
+
+    <div id="stickyContactBar" style="position: fixed; bottom: 0; left: 0; width: 100%; background: var(--primary-dark-blue); color: white; padding: 10px 0; z-index: 10000; display: none; justify-content: space-around; align-items: center; box-shadow: 0 -2px 10px rgba(0,0,0,0.5);">
+        <a href="tel:+966500371908" style="color: white; text-decoration: none; font-weight: 700; display: flex; align-items: center; gap: 5px; background: #E60000; padding: 8px 15px; border-radius: 8px; transition: 0.3s; font-size: 1.1em;">
+            <i class="fas fa-phone"></i> <span data-bn="কল করুন" data-en="Call Now" data-ar="اتصل الآن">কল করুন</span>
+        </a>
+        <a href="https://wa.me/966500371908?text=আমার%20জরুরী%20সার্ভিস%20দরকার" target="_blank" style="color: white; text-decoration: none; font-weight: 700; display: flex; align-items: center; gap: 5px; background: var(--offer-green); padding: 8px 15px; border-radius: 8px; transition: 0.3s; font-size: 1.1em;">
+            <i class="fab fa-whatsapp"></i> <span data-bn="WhatsApp করুন" data-en="WhatsApp Us" data-ar="واتساب">WhatsApp করুন</span>
+        </a>
+    </div>
+    <div id="extraServicesModal" style="display:none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); z-index: 10002; backdrop-filter: blur(5px); overflow-y: auto;">
+        <div style="background: white; max-width: 700px; margin: 50px auto; padding: 30px; border-radius: 20px; box-shadow: var(--shadow-heavy); position: relative; border-top: 5px solid var(--accent-light-blue);">
+            
+            <button id="closeModal" style="position: absolute; top: 15px; right: 15px; background: var(--offer-price-color); color: white; border: none; border-radius: 50%; width: 35px; height: 35px; font-size: 20px; cursor: pointer; transition: 0.3s;">×</button>
+            
+            <h3 style="color: var(--primary-dark-blue); font-size: 1.8em; margin-bottom: 20px; border-bottom: 3px solid var(--accent-light-blue); padding-bottom: 10px; text-align: center;" 
+                data-bn="🔥 আকামা, জাওয়াজাত ও সকল অনলাইন সার্ভিস 🔥" 
+                data-en="🔥 Iqama, Jawazat & All Online Services 🔥" 
+                data-ar="🔥 خدمات الإقامة والجوازات وجميع الخدمات الإلكترونية 🔥">
+                🔥 আকামা, জাওয়াজাত ও সকল অনলাইন সার্ভিস 🔥
+            </h3>
+            
+            <p style="font-size: 1.1em; color: var(--offer-price-color); font-weight: 700; margin-bottom: 20px; text-align: center;">
+                <i class="fas fa-exclamation-circle"></i> ওয়াদি আল-দাওয়াছির খামাছিন মোবাইল মার্কেটে সরাসরি যোগাযোগ করুন।
+            </p>
+            
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; text-align: left;">
+                
+                <ul style="list-style: none; padding: 0;">
+                    <h4 style="color: var(--secondary-blue); margin-bottom: 10px;"><i class="fas fa-cogs" style="color: var(--accent-light-blue); margin-right: 8px;"></i> অনলাইন ও সাধারণ সেবা:</h4>
+                    <li style="margin-bottom: 10px;"><i class="fas fa-check-circle" style="color: #00B894; margin-right: 10px;"></i> আকামান নবায়ন ও নতুন করা</li>
+                    <li style="margin-bottom: 10px;"><i class="fas fa-check-circle" style="color: #00B894; margin-right: 10px;"></i> কপালা করা (কপিল পরিবর্তন) যে কোনো পেশা</li>
+                    <li style="margin-bottom: 10px;"><i class="fas fa-check-circle" style="color: #00B894; margin-right: 10px;"></i> কিওয়া থেকে কপালা তলব ও কন্টাক্ট ওকে করা</li>
+                    <li style="margin-bottom: 10px;"><i class="fas fa-check-circle" style="color: #00B894; margin-right: 10px;"></i> আকামা ও গাড়ির তামিন (insurance)</li>
+                    <li style="margin-bottom: 10px;"><i class="fas fa-check-circle" style="color: #00B894; margin-right: 10px;"></i> মোয়াচ্ছা সৌদি ডুকানো ও মোয়াচ্ছা খোলা</li>
+                    <li style="margin-bottom: 10px;"><i class="fas fa-check-circle" style="color: #00B894; margin-right: 10px;"></i> সিজিল তিজারি, রুখচা রেনু ও নতুন সিজিল তৌরি</li>
+                    <li style="margin-bottom: 10px;"><i class="fas fa-check-circle" style="color: #00B894; margin-right: 10px;"></i> ফায়ার সার্ভিসের সার্টিফিকেট বাহির করা</li>
+                    <li style="margin-bottom: 10px;"><i class="fas fa-check-circle" style="color: #00B894; margin-right: 10px;"></i> সিজিল ট্রান্সফার ও গোরপা তিজারির কাজ</li>
+                    <li style="margin-bottom: 10px;"><i class="fas fa-check-circle" style="color: #00B894; margin-right: 10px;"></i> ভিসা ওকালা করা, কেন্সেল ও নতুন ওকালা</li>
+                    <li style="margin-bottom: 10px;"><i class="fas fa-check-circle" style="color: #00B894; margin-right: 10px;"></i> আমেল, আমেল মঞ্জিল বা ছায়েখ খাছ ভিসা তোলা</li>
+                    <li style="margin-bottom: 10px;"><i class="fas fa-check-circle" style="color: #00B894; margin-right: 10px;"></i> কফিল লেটার ও পান্নি মেহনার শাহদা করা</li>
+                    <li style="margin-bottom: 10px;"><i class="fas fa-check-circle" style="color: #00B894; margin-right: 10px;"></i> মোক্তবা আমল ও মোয়াচ্ছার সমস্যা সমাধান</li>
+                    <li style="margin-bottom: 10px;"><i class="fas fa-check-circle" style="color: #00B894; margin-right: 10px;"></i> কোম্পানির ভিসা এফা বাহির করা</li>
+                </ul>
+                
+                <ul style="list-style: none; padding: 0;">
+                    <h4 style="color: var(--secondary-blue); margin-bottom: 10px;"><i class="fas fa-passport" style="color: var(--accent-light-blue); margin-right: 8px;"></i> জাওয়াজাত ও ভিসা সংক্রান্ত সেবা:</h4>
+                    <li style="margin-bottom: 10px; color: var(--offer-price-color); font-weight: 700;"><i class="fas fa-times-circle" style="color: var(--offer-price-color); margin-right: 10px;"></i> জাওয়াজাতের কাজ: তাজদিদ আকামা - এসদার আকামা</li>
+                    <li style="margin-bottom: 10px;"><i class="fas fa-check-circle" style="color: #00B894; margin-right: 10px;"></i> তাদিল মেহনা - ছুটি (Exits)</li>
+                    <li style="margin-bottom: 10px;"><i class="fas fa-check-circle" style="color: #00B894; margin-right: 10px;"></i> নকল মালুমাত - পিন্ট আকামা - পাসপোর্ট মেয়াদ বৃদ্ধি</li>
+                    <li style="margin-bottom: 10px;"><i class="fas fa-check-circle" style="color: #00B894; margin-right: 10px;"></i> আকমা নম্বার বাহির করা</li>
+                    <li style="margin-bottom: 10px;"><i class="fas fa-check-circle" style="color: #00B894; margin-right: 10px;"></i> ছুটি থেকে না আসলে নাম কাটা</li>
+                    <li style="margin-bottom: 10px;"><i class="fas fa-check-circle" style="color: #00B894; margin-right: 10px;"></i> জাওাযাত পিন্ট - মতলুব প্রিন্ট</li>
+                    <li style="margin-bottom: 10px;"><i class="fas fa-check-circle" style="color: #00B894; margin-right: 10px;"></i> পেশা পরিবর্তন করা</li>
+                    <li style="margin-bottom: 10px;"><i class="fas fa-check-circle" style="color: #00B894; margin-right: 10px;"></i> জেয়ারা ভিসা বাহির করা</li>
+                    <li style="margin-bottom: 10px;"><i class="fas fa-check-circle" style="color: #00B894; margin-right: 10px;"></i> জেয়ারা ভিসার মেয়াদ বাড়ানো</li>
+                    <li style="margin-bottom: 10px;"><i class="fas fa-check-circle" style="color: #00B894; margin-right: 10px;"></i> অনলাইন মেডিকেল (Iquma & License)</li>
+                    <li style="margin-bottom: 10px;"><i class="fas fa-check-circle" style="color: #00B894; margin-right: 10px;"></i> অনলাইন ভিত্তিক যে কোনো কাজ করা হয়।</li>
+                    <li style="margin-bottom: 10px; color: var(--offer-price-color); font-weight: 700;"><i class="fas fa-plane" style="color: var(--offer-price-color); margin-right: 10px;"></i> বিমান টিকেট সংক্রান্ত সেবা</li>
+                </ul>
+            </div>
+            
+            <a href="https://wa.me/966500371908?text=আমার%20আকামা%20সংক্রান্ত%20জরুরী%20সেবা%20দরকার" target="_blank" class="package-cta" style="margin-top: 30px; font-size: 1.2em;">
+                 <i class="fab fa-whatsapp"></i> এখনই WhatsApp করুন (জরুরী সেবার জন্য)
+            </a>
+        </div>
+    </div>
+    <div id="contactModal" style="display:none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); z-index: 10003; backdrop-filter: blur(5px); overflow-y: auto;">
+        <div style="max-width: 500px;">
+            <button id="closeContactModal" style="position: absolute; top: 15px; right: 15px; background: var(--offer-price-color); color: white; border: none; border-radius: 50%; width: 35px; height: 35px; font-size: 20px; cursor: pointer; transition: 0.3s;">×</button>
+            
+            <h3 style="color: var(--primary-dark-blue); font-size: 1.5em; margin-bottom: 30px; border-bottom: 3px solid var(--accent-light-blue); padding-bottom: 10px; text-align: center;" 
+                data-bn="আপনার পছন্দের যোগাযোগ মাধ্যম নির্বাচন করুন" 
+                data-en="Choose Your Preferred Contact Method" 
+                data-ar="اختر وسيلة التواصل المفضلة لديك">
+                আপনার পছন্দের যোগাযোগ মাধ্যম নির্বাচন করুন
+            </h3>
+            
+            <button id="sendViaWhatsapp" class="modal-option-btn whatsapp-btn">
+                <i class="fab fa-whatsapp" style="font-size: 1.4em;"></i> <span data-bn="WhatsApp দিয়ে পাঠান" data-en="Send via WhatsApp" data-ar="إرسال عبر واتساب">WhatsApp দিয়ে পাঠান</span>
+            </button>
+            
+            <button id="sendViaEmail" class="modal-option-btn email-btn" disabled>
+                <i class="fas fa-envelope" style="font-size: 1.4em;"></i> <span data-bn="ইমেইল দিয়ে পাঠান" data-en="Send via Email" data-ar="إرسال عبر البريد الإلكتروني">ইমেইল দিয়ে পাঠান</span>
+                <span data-bn="(শীঘ্রই আসছে)" data-en="(Coming Soon)" data-ar="(قريباً)" style="font-size: 0.8em; opacity: 0.7;">(শীঘ্রই আসছে)</span>
+            </button>
+            
+            <p style="text-align: center; margin-top: 20px; font-style: italic; color: #555;" data-bn="দ্রুততম সমাধানের জন্য WhatsApp নির্বাচন করুন।" data-en="Choose WhatsApp for the fastest solution." data-ar="اختر واتساب للحصول على أسرع حل.">
+                দ্রুততম সমাধানের জন্য WhatsApp নির্বাচন করুন।
+            </p>
+        </div>
+    </div>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "name": "Online Services",
+      "description": "A-Z অনলাইন সার্ভিস, ভিসা প্রসেসিং, ফ্লাইট বুকিং, আকামা, জাওয়াজাত। সকল সমস্যার অনলাইন সমাধান।",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "ওয়াদি আলদাওয়াসে, আল-খামাসেন মোবাইল মার্কেট",
+        "addressLocality": "রিয়াদ",
+        "addressRegion": "রিয়াদ অঞ্চল",
+        "postalCode": "12345",
+        "addressCountry": "SA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "24.641919",
+        "longitude": "46.675415"
+      },
+      "telephone": "+966500371908",
+      "email": "netservices16@gmail.com",
+      "openingHours": [
+        "Sa-Th 09:00-18:00"
+      ],
+      "url": "https://online-services.com",
+      "priceRange": "$$",
+      "areaServed": "Saudi Arabia",
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Online, Iqama & Travel Services",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Online Services"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Visa Processing"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Iqama & Jawazat Services"
+            }
+          }
+        ]
+      },
+      "review": {
+        "@type": "Review",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "5",
+          "bestRating": "5"
+        },
+        "author": {
+          "@type": "Person",
+          "name": "আহমেদ আল-সুদাইস"
+        }
+      }
+    }
+    </script>
+
+    <script>
+        // --- Core Functions ---
+        const ADMIN_EMAIL = "netservices16@gmail.com";
+        const ADMIN_WHATSAPP = "966500371908"; // without + or 00, start with country code
+        
+        // Helper function for translated messages
+        function getTranslatedMessage(ar, en, bn) {
+            const lang = localStorage.getItem('preferredLanguage') || 'bn'; // Default to BN
+            return lang === 'ar' ? ar : lang === 'en' ? en : bn;
+        }
+
+        // Notification system
+        function showNotification(message, type = 'info') {
+            document.querySelectorAll('.notification').forEach(n => n.remove());
+
+            const notification = document.createElement('div');
+            notification.className = `notification ${type}`;
+            notification.innerHTML = message;
+            document.body.appendChild(notification);
+            
+            const closeBtn = document.createElement('button');
+            closeBtn.innerHTML = '×';
+            closeBtn.style.cssText = `
+                position: absolute;
+                top: 10px;
+                right: 15px;
+                background: none;
+                border: none;
+                color: white;
+                font-size: 20px;
+                cursor: pointer;
+                padding: 0;
+                width: 25px;
+                height: 25px;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            `;
+            closeBtn.onmouseover = () => closeBtn.style.background = 'rgba(255,255,255,0.2)';
+            closeBtn.onmouseout = () => closeBtn.style.background = 'none';
+            closeBtn.onclick = () => {
+                notification.classList.remove('show');
+                setTimeout(() => notification.remove(), 300);
+            };
+            notification.appendChild(closeBtn);
+            
+            setTimeout(() => notification.classList.add('show'), 100);
+            
+            const autoRemove = setTimeout(() => {
+                if (notification.parentNode) {
+                    notification.classList.remove('show');
+                    setTimeout(() => notification.remove(), 300);
+                }
+            }, 6000);
+            
+            notification.addEventListener('mouseenter', () => clearTimeout(autoRemove));
+            notification.addEventListener('mouseleave', () => {
+                const delayOnLeave = setTimeout(() => {
+                    if (notification.parentNode) {
+                        notification.classList.remove('show');
+                        setTimeout(() => notification.remove(), 300);
+                    }
+                }, 3000);
+                notification.addEventListener('mouseenter', () => clearTimeout(delayOnLeave), { once: true });
+            });
+        }
+        
+        // Enhanced form validation
+        function validateForm(formData) {
+            const errors = [];
+            
+            if (!formData.name || formData.name.length < 2) {
+                errors.push(getTranslatedMessage(
+                    'يجب أن يكون الاسم مكونًا من حرفين على الأقل',
+                    'Name must be at least 2 characters long',
+                    'নাম কমপক্ষে ২ অক্ষরের হতে হবে'
+                ));
+            }
+            
+            const phoneRegex = /^(009665|9665|\+9665|05)\d{8}$/;
+            if (!formData.phone || formData.phone.length < 10) {
+                 errors.push(getTranslatedMessage(
+                    'يرجى إدخال رقم واتساب صحيح',
+                    'Please enter a valid WhatsApp number',
+                    'দয়া করে একটি বৈধ হোয়াটসঅ্যাপ নম্বর দিন'
+                ));
+            } else if (!phoneRegex.test(formData.phone)) {
+                 errors.push(getTranslatedMessage(
+                    'رقم الواتساب غير صحيح, يرجى التأكد من الرمز الدولي.',
+                    'The WhatsApp number is incorrect, please check the country code.',
+                    'হোয়াটসঅ্যাপ নম্বরটি ভুল, দয়া করে দেশের কোডটি যাচাই করুন।'
+                ));
+            }
+            
+            if (formData.email) {
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (!emailRegex.test(formData.email)) {
+                    errors.push(getTranslatedMessage(
+                        'يرجى إدخال عنوان بريد إلكتروني صحيح',
+                        'Please enter a valid email address',
+                        'দয়া করে একটি বৈধ ইমেল ঠিকানা দিন'
+                    ));
+                }
+            }
+            
+            if (!formData.service) {
+                errors.push(getTranslatedMessage(
+                    'يرجى اختيار خدمة',
+                    'Please select a service',
+                    'দয়া করে একটি সার্ভিস নির্বাচন করুন'
+                ));
+            }
+            
+            return errors;
+        }
+
+        // --- Language Switching Logic ---
+        function setLanguage(lang) {
+            const translatableElements = document.querySelectorAll('[data-ar], [data-en], [data-bn]');
+            const htmlTag = document.documentElement;
+            const langButtons = document.querySelectorAll('.lang-button');
+
+            // 1. HTML lang attribute and text direction
+            htmlTag.setAttribute('lang', lang);
+            if (lang === 'ar') {
+                htmlTag.setAttribute('dir', 'rtl');
+            } else {
+                htmlTag.setAttribute('dir', 'ltr');
+            }
+
+            // 2. Button active state
+            langButtons.forEach(btn => {
+                btn.classList.remove('active');
+                btn.style.transform = 'scale(1)';
+            });
+            
+            const activeBtn = document.querySelector(`.lang-button[data-lang="${lang}"]`);
+            if (activeBtn) {
+                activeBtn.classList.add('active');
+                activeBtn.style.transform = 'scale(1.1)';
+            }
+
+            // 3. Translate all elements
+            translatableElements.forEach(el => {
+                const text = el.getAttribute(`data-${lang}`);
+                if (text) {
+                    el.textContent = text;
+                }
+                
+                // Translate placeholders (for forms)
+                const placeholder = el.getAttribute(`data-${lang}-placeholder`);
+                if (placeholder && (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA')) {
+                    el.setAttribute('placeholder', placeholder);
+                } else if (el.tagName === 'SELECT') {
+                    Array.from(el.options).forEach(option => {
+                        const optionText = option.getAttribute(`data-${lang}`);
+                        if (optionText) {
+                            option.textContent = optionText;
+                        }
+                    });
+                }
             });
 
-            // কল বাটনে ক্লিক ইভেন্ট
-            callButton.addEventListener('click', function() {
-                // ডায়ালারে নিয়ে যাবে
-                window.location.href = `tel:${phoneNumber}`;
+            // Update document title
+            document.title = lang === 'ar' ? 'Online Services - شريكك الموثوق للحلول الإلكترونية' :
+                            lang === 'en' ? 'Online Services - Your Trusted Solution Partner' :
+                            'Online Services - আপনার বিশ্বস্ত সমাধান সহযোগী';
+        }
+        
+        // --- Core Functions for Contact Form Submission ---
+
+        function getFormData() {
+            return {
+                name: document.getElementById('contactName').value.trim(),
+                email: document.getElementById('contactEmail').value.trim(),
+                phone: document.getElementById('contactPhone').value.trim(),
+                service: document.getElementById('contactService').value,
+                requirements: document.getElementById('contactRequirements').value.trim()
+            };
+        }
+
+        function createWhatsappMessage(formData) {
+            const whatsappText = `*New Service Inquiry (Online Services Website)*%0A%0A` +
+                                 `*Name:* ${formData.name}%0A` +
+                                 `*Phone:* ${formData.phone}%0A` +
+                                 (formData.email ? `*Email:* ${formData.email}%0A` : '') +
+                                 `*Requested Service:* ${formData.service}%0A` +
+                                 `*Requirements:* ${formData.requirements || 'N/A'}%0A%0A` +
+                                 `_Please help me with this inquiry._`;
+            return `https://wa.me/${ADMIN_WHATSAPP}?text=${whatsappText}`;
+        }
+        
+        function createEmailLink(formData) {
+            const subject = encodeURIComponent(`New Inquiry: ${formData.service}`);
+            const body = encodeURIComponent(
+                `Hello Online Services Team,\n\nI am sending a new service inquiry.\n\n` +
+                `Name: ${formData.name}\n` +
+                `Phone: ${formData.phone}\n` +
+                `Email (Provided in Form): ${formData.email || 'N/A'}\n` +
+                `Requested Service: ${formData.service}\n` +
+                `Requirements: ${formData.requirements || 'No specific requirements mentioned.'}\n\n` +
+                `Thank you.`
+            );
+            return `mailto:${ADMIN_EMAIL}?subject=${subject}&body=${body}`;
+        }
+
+
+        // --- DOM Content Loaded ---
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('Online Services Website Loaded Successfully!');
+            
+            // Element selectors
+            const langButtons = document.querySelectorAll('.lang-button');
+            const contactForm = document.getElementById('contact-form');
+            const whatsappFloat = document.getElementById('whatsappFloat');
+            const whatsappWidget = document.getElementById('whatsapp-widget');
+            const closeChat = document.getElementById('close-chat');
+            const cookieBanner = document.getElementById('cookieConsent');
+            const acceptCookies = document.getElementById('acceptCookies');
+            const backToTop = document.getElementById('backToTop');
+            const statsSection = document.getElementById('stats');
+            const stickyBar = document.getElementById('stickyContactBar');
+            
+            // মডাল এলিমেন্টস
+            const showServicesBtn = document.getElementById('showAllServices'); // Service List Modal Trigger
+            const extraServicesModal = document.getElementById('extraServicesModal');
+            const closeModalBtn = document.getElementById('closeModal');
+            
+            // New Contact Modal Elements
+            const showContactModalBtn = document.getElementById('showContactModalBtn');
+            const contactModal = document.getElementById('contactModal');
+            const closeContactModal = document.getElementById('closeContactModal');
+            const sendViaWhatsapp = document.getElementById('sendViaWhatsapp');
+            const sendViaEmail = document.getElementById('sendViaEmail');
+
+
+            // --- 1. Language Initialization and Events ---
+            
+            let savedLanguage = localStorage.getItem('preferredLanguage');
+            if (!savedLanguage) {
+                savedLanguage = 'bn';
+                localStorage.setItem('preferredLanguage', 'bn');
+            }
+            setLanguage(savedLanguage);
+
+            langButtons.forEach(button => {
+                button.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const lang = e.target.getAttribute('data-lang');
+                    setLanguage(lang);
+                    localStorage.setItem('preferredLanguage', lang);
+                });
+            });
+
+            // --- 2. Contact Form New Submission Logic (WhatsApp/Email) ---
+            if (showContactModalBtn && contactModal) {
+                
+                // A. Show Modal on Button Click (After Validation)
+                showContactModalBtn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    const formData = getFormData();
+                    const errors = validateForm(formData);
+                    
+                    if (errors.length > 0) {
+                        showNotification(errors.join('<br>'), 'error');
+                        return;
+                    }
+                    
+                    // Validation Success: Show Contact Modal
+                    contactModal.style.display = 'flex';
+                    document.body.style.overflow = 'hidden';
+                    
+                    // Store valid data for subsequent action
+                    contactModal.dataset.formData = JSON.stringify(formData);
+                });
+                
+                // B. Close Contact Modal
+                closeContactModal.addEventListener('click', () => {
+                    contactModal.style.display = 'none';
+                    document.body.style.overflow = 'auto';
+                });
+                
+                contactModal.addEventListener('click', (e) => {
+                    if (e.target === contactModal) {
+                        contactModal.style.display = 'none';
+                        document.body.style.overflow = 'auto';
+                    }
+                });
+
+                // C. WhatsApp Submission Logic
+                sendViaWhatsapp.addEventListener('click', () => {
+                    const formDataJson = contactModal.dataset.formData;
+                    if (formDataJson) {
+                        const formData = JSON.parse(formDataJson);
+                        const whatsappLink = createWhatsappMessage(formData);
+                        window.open(whatsappLink, '_blank');
+                        
+                        // Close modal and show success message
+                        contactModal.style.display = 'none';
+                        document.body.style.overflow = 'auto';
+                        contactForm.reset(); // Clear the form after success
+                        showNotification(
+                            getTranslatedMessage(
+                                'تم تجهيز رسالة الواتساب. يرجى الضغط على زر الإرسال في التطبيق.',
+                                'WhatsApp message is prepared. Please click send in the app.',
+                                'হোয়াটসঅ্যাপ বার্তা প্রস্তুত। দয়া করে অ্যাপে গিয়ে পাঠানোর বাটন চাপুন।'
+                            ),
+                            'success'
+                        );
+                    }
+                });
+                
+                // D. Email Submission Logic (Coming Soon)
+                sendViaEmail.addEventListener('click', () => {
+                    const formDataJson = contactModal.dataset.formData;
+                    if (formDataJson) {
+                         const formData = JSON.parse(formDataJson);
+                         const emailLink = createEmailLink(formData);
+                         window.open(emailLink, '_blank');
+                         
+                         contactModal.style.display = 'none';
+                         document.body.style.overflow = 'auto';
+                         contactForm.reset(); 
+                         showNotification(
+                             getTranslatedMessage(
+                                 'تم تجهيز رسالة البريد الإلكتروني. يرجى الضغط على زر الإرسال في التطبيق.',
+                                 'Email message is prepared. Please click send in the email client.',
+                                 'ইমেল বার্তা প্রস্তুত। দয়া করে ইমেল অ্যাপে গিয়ে পাঠানোর বাটন চাপুন।'
+                             ),
+                             'info'
+                         );
+                    }
+                });
+            }
+
+            // --- 3. Statistics Counter Animation ---
+            function animateCounters() {
+                const counters = document.querySelectorAll('#stats .stat-number');
+                const speed = 400;
+                
+                counters.forEach(counter => {
+                    // Check if animation has run for this counter
+                    if(counter.dataset.animated) return;
+
+                    const target = parseInt(counter.getAttribute('data-target'));
+                    let count = 0;
+                    
+                    function step() {
+                        const increment = Math.ceil(target / speed);
+                        count += increment;
+                        if (count > target) count = target;
+                        
+                        counter.textContent = count + (counter.textContent.includes('+') ? '+' : '');
+                        
+                        if (count < target) {
+                            requestAnimationFrame(step);
+                        } else {
+                            counter.dataset.animated = 'true';
+                        }
+                    }
+                    requestAnimationFrame(step);
+                });
+            }
+            
+            if (statsSection) {
+                document.querySelectorAll('#stats .stat-number').forEach(counter => {
+                    const value = counter.textContent;
+                    counter.setAttribute('data-target', value.replace(/\D/g, ''));
+                    counter.textContent = '0' + (value.includes('+') ? '+' : '');
+                });
+                
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            animateCounters();
+                        }
+                    });
+                }, { threshold: 0.5 });
+                
+                observer.observe(statsSection);
+            }
+
+            // --- 4. WhatsApp Chat Widget ---
+            if (whatsappFloat && whatsappWidget && closeChat) {
+                whatsappFloat.addEventListener('click', () => {
+                    whatsappWidget.style.display = 'block';
+                });
+                
+                closeChat.addEventListener('click', () => {
+                    whatsappWidget.style.display = 'none';
+                });
+                
+                document.querySelectorAll('.quick-replies button').forEach(button => {
+                    button.addEventListener('click', () => {
+                        const message = button.getAttribute('data-message');
+                        const encodedMessage = encodeURIComponent(message);
+                        window.open(`https://wa.me/${ADMIN_WHATSAPP}?text=${encodedMessage}`, '_blank');
+                        whatsappWidget.style.display = 'none';
+                    });
+                });
+            }
+
+            // --- 5. Cookie Consent ---
+            if (cookieBanner && acceptCookies) {
+                if (!localStorage.getItem('cookiesAccepted')) {
+                    setTimeout(() => { 
+                        cookieBanner.style.display = 'flex';
+                    }, 1000);
+                } else {
+                    cookieBanner.style.display = 'none';
+                }
+                
+                acceptCookies.addEventListener('click', () => {
+                    localStorage.setItem('cookiesAccepted', 'true');
+                    cookieBanner.style.display = 'none';
+                    
+                    showNotification(
+                        getTranslatedMessage(
+                            'تم حفظ إعدادات الكوكيز بنجاح!',
+                            'Cookie settings saved successfully!',
+                            'কুকি সেটিংস সফলভাবে সংরক্ষিত হয়েছে!'
+                        ),
+                        'success'
+                    );
+                });
+            }
+
+            // --- 6. Back to Top Button ---
+            if (backToTop) {
+                window.addEventListener('scroll', () => {
+                    if (window.pageYOffset > 300) {
+                        backToTop.classList.add('show');
+                    } else {
+                        backToTop.classList.remove('show');
+                    }
+                });
+                
+                backToTop.addEventListener('click', () => {
+                    window.scrollTo({
+                        top: 0,
+                        behavior: 'smooth'
+                    });
+                });
+            }
+
+            // --- 7. নতুন সার্ভিসেস মডাল লজিক ---
+            if (showServicesBtn && extraServicesModal && closeModalBtn) {
+                showServicesBtn.addEventListener('click', () => {
+                    extraServicesModal.style.display = 'block';
+                    document.body.style.overflow = 'hidden';
+                });
+
+                closeModalBtn.addEventListener('click', () => {
+                    extraServicesModal.style.display = 'none';
+                    document.body.style.overflow = 'auto';
+                });
+                
+                extraServicesModal.addEventListener('click', (e) => {
+                    if (e.target === extraServicesModal) {
+                        extraServicesModal.style.display = 'none';
+                        document.body.style.overflow = 'auto';
+                    }
+                });
+            }
+            
+            // --- 8. ম্যাপ ফ্রেম আপডেট ---
+            const mapFrame = document.getElementById('map-frame');
+            const mapLink = document.querySelector('.map-link');
+            
+            if (mapFrame && mapLink) {
+                const mapQuery = "Wadi Aldawase Khamaseen Mobile Market, Riyadh, Saudi Arabia";
+                const encodedQuery = encodeURIComponent(mapQuery);
+                
+                // **** [সংশোধন করা হয়েছে] ****
+                // সঠিক Google Maps Embed URL ব্যবহার করা হয়েছে যা CSP-র সাথে সামঞ্জস্যপূর্ণ।
+                mapFrame.src = `https://www.google.com/maps/embed/v1/place?key=YOUR_API_KEY&q=${encodedQuery}&zoom=16`;
+                mapLink.href = `https://www.google.com/maps/search/?api=1&query=${encodedQuery}`;
+                
+                // নোট: এখানে `YOUR_API_KEY` -র জায়গায় তোমার Google Maps API Key দিতে হবে।
+                // যদি তোমার API Key না থাকে, এই লাইনটি ব্যবহার করতে পারো (তবে এটি API Key-এর মতো স্থিতিশীল নাও হতে পারে):
+                // mapFrame.src = `https://maps.google.com/maps?q=${encodedQuery}&t=&z=16&ie=UTF8&iwloc=&output=embed`;
+                // *******************************
+            }
+
+            // --- 9. ফ্ল্যাশ অফার কাউন্টডাউন টাইমার ---
+            const countdownEl = document.getElementById('countdownTimer');
+            const flashBar = document.getElementById('flashOfferBar');
+            
+            if (countdownEl && flashBar) {
+                const now = new Date();
+                const midnight = new Date(now.getFullYear(), now.getMonth(), now.getDate(), now.getHours() + 1, 0, 0);
+                
+                function updateCountdown() {
+                    const currentTime = new Date();
+                    let remainingTime = midnight - currentTime;
+
+                    if (remainingTime <= 0) {
+                        const nextHour = new Date(currentTime.getTime() + 60 * 60 * 1000);
+                        midnight.setTime(nextHour.getTime());
+                        remainingTime = midnight - currentTime;
+                    }
+                    
+                    const hours = Math.floor((remainingTime % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                    const minutes = Math.floor((remainingTime % (1000 * 60 * 60)) / (1000 * 60));
+                    const seconds = Math.floor((remainingTime % (1000 * 60)) / 1000);
+                    
+                    const timeString = 
+                        (hours < 10 ? '0' + hours : hours) + ':' +
+                        (minutes < 10 ? '0' + minutes : minutes) + ':' +
+                        (seconds < 10 ? '0' + seconds : seconds);
+                    
+                    countdownEl.textContent = timeString;
+                }
+                
+                const timerInterval = setInterval(updateCountdown, 1000);
+                updateCountdown();
+            }
+            
+            // --- 10. স্টিকি কন্টাক্ট বার লজিক ---
+            
+            if (stickyBar) {
+                window.addEventListener('scroll', () => {
+                    if (window.pageYOffset > 600) {
+                        stickyBar.style.display = 'flex';
+                    } else {
+                        stickyBar.style.display = 'none';
+                    }
+                });
+            }
+
+
+            // --- 11. Interactive Effects ---
+            document.querySelectorAll('img').forEach(img => {
+                img.addEventListener('load', function() {
+                    this.style.opacity = '1';
+                    this.style.transition = 'opacity 0.5s ease-in';
+                });
+                
+                if(img.complete) {
+                     img.style.opacity = '1';
+                } else {
+                    img.style.opacity = '0';
+                }
+            });
+            
+            // --- 12. Offline/Online Status ---
+            window.addEventListener('online', () => {
+                console.log('You are online');
+                showNotification(
+                    getTranslatedMessage(
+                        'تم استعادة اتصال الإنترنت',
+                        'Internet connection restored',
+                        'ইন্টারনেট সংযোগ পুনরুদ্ধার হয়েছে'
+                    ),
+                    'success'
+                );
+            });
+
+            window.addEventListener('offline', () => {
+                console.log('You are offline');
+                showNotification(
+                    getTranslatedMessage(
+                        'فقدان اتصال الإنترنت',
+                        'Internet connection lost',
+                        'ইন্টারনেট সংযোগ হারিয়ে গেছে'
+                    ),
+                    'error'
+                );
             });
         });
+        
+        // Global error handler
+        window.addEventListener('error', function(e) {
+            console.error('Global Error:', e.error);
+        });
     </script>
-    </body>
+</body>
 </html>
