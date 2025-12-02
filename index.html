@@ -1152,7 +1152,7 @@
         <i class="fas fa-chevron-up"></i>
     </div>
 
-    <div class="whatsapp-float" id="whatsappFloat" onclick="handleNativeAction('https://wa.me/966500371908', 'WHATSAPP');">
+    <div class="whatsapp-float" id="whatsappFloat" onclick="showWhatsappWidget();">
         <i class="fab fa-whatsapp"></i>
     </div>
 
@@ -1598,6 +1598,12 @@
                 window.open(url, '_blank');
             }
         }
+
+        // **** নতুন যোগ করা ফাংশন: ফ্লোটিং বাটন ক্লিক হ্যান্ডেলিং ****
+        function showWhatsappWidget() {
+            const whatsappWidget = document.getElementById('whatsapp-widget');
+            whatsappWidget.style.display = 'block';
+        }
         // ******************************************************
         
         // --- Core Functions ---
@@ -1989,14 +1995,19 @@
 
             // --- 4. WhatsApp Chat Widget ---
             if (whatsappFloat && whatsappWidget && closeChat) {
-                // এখানে whatsappFloat এর onclick ইভেন্টটি এখন HTML-এ handleNativeAction() কল করবে, 
-                // তাই এই লজিকটি (whatsappWidget.style.display = 'block') দরকার নেই। 
-                // এটি শুধুমাত্র নেটিভ অ্যাপ খোলার পরিবর্তে উইজেট দেখানোর জন্য ব্যবহৃত হত। 
-                // তবে উইজেটের মাধ্যমে নেটিভ কলিং করার জন্য এটি ব্যবহার করা যেতে পারে।
                 
-                // এখানে শুধু close-chat এর লজিক রেখে দিচ্ছি যাতে উইজেট বন্ধ করা যায়
+                // উইজেট বন্ধ করার লজিক
                 closeChat.addEventListener('click', () => {
                     whatsappWidget.style.display = 'none';
+                });
+                
+                // যখন ইউজার উইজেট থেকে বেরিয়ে যাবে, তখন সেটি বন্ধ হবে
+                whatsappWidget.addEventListener('mouseleave', () => {
+                    setTimeout(() => {
+                        if (whatsappWidget.style.display === 'block') {
+                            whatsappWidget.style.display = 'none';
+                        }
+                    }, 5000); // 5 সেকেন্ড পর বন্ধ হবে
                 });
                 
                 // Note: .quick-replies button logic is now handled by handleNativeAction in HTML
