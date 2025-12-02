@@ -13,23 +13,23 @@
     <meta property="og:title" content="Online Services - আপনার সম্পূর্ণ অনলাইন সমাধান">
     <meta property="og:description" content="A-Z অনলাইন সার্ভিস, ভিসা প্রসেসিং, ফ্লাইট বুকিং, আকামা, জাওয়াজাত">
     <meta property="og:type" content="website">
-    <meta property="og:image" content="https://i.postimg.cc/Hs44RFFP/Round-Photo-Nov292025-210153.png">
+    <meta property="og:image" content="https://i.postimg.cc/k4PknVys/Round-Photo-Nov292025-012428.png">
     <meta property="og:url" content="https://online-services.com">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:image" content="https://i.postimg.cc/Hs44RFFP/Round-Photo-Nov292025-210153.png">
+    <meta name="twitter:image" content="https://i.postimg.cc/k4PknVys/Round-Photo-Nov292025-012428.png">
     
     <meta http-equiv="Content-Security-Policy" 
           content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://www.googletagmanager.com https://www.google-analytics.com https://connect.facebook.net; 
                    style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; 
                    font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com;
                    img-src 'self' data: https:; connect-src 'self' https://online-services.com;
-                   frame-src 'self' https://www.google.com https://maps.google.com https://www.googleusercontent.com; 
+                   frame-src 'self' https://www.google.com; 
                    ">
     <meta http-equiv="X-XSS-Protection" content="1; mode=block">
     
     <link rel="manifest" href="/manifest.json">
     <meta name="theme-color" content="#0A2E50">
-    <link rel="apple-touch-icon" href="https://i.postimg.cc/Hs44RFFP/Round-Photo-Nov292025-210153.png">
+    <link rel="apple-touch-icon" href="https://i.postimg.cc/k4PknVys/Round-Photo-Nov292025-012428.png">
     
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@400;700;900&display=swap">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
@@ -1152,7 +1152,7 @@
         <i class="fas fa-chevron-up"></i>
     </div>
 
-    <div class="whatsapp-float" id="whatsappFloat">
+    <div class="whatsapp-float" id="whatsappFloat" onclick="handleNativeAction('https://wa.me/966500371908', 'WHATSAPP');">
         <i class="fab fa-whatsapp"></i>
     </div>
 
@@ -1164,10 +1164,10 @@
         <div class="chat-body">
             <p data-ar="كيف يمكننا مساعدتك؟" data-en="How can we help you?" data-bn="কীভাবে আমরা আপনাকে সাহায্য করতে পারি?">কীভাবে আমরা আপনাকে সাহায্য করতে পারি?</p>
             <div class="quick-replies">
-                <button data-message="আমি আকামা/জাওয়াজাত সার্ভিস সম্পর্কে জানতে চাই" data-ar="🛂 خدمات الإقامة والجوازات" data-en="🛂 Iqama/Jawazat Services" data-bn="🛂 আকামা/জাওয়াজাত সার্ভিস">🛂 আকামা/জাওয়াজাত সার্ভিস</button>
-                <button data-message="আমি অনলাইন সার্ভিস সম্পর্কে জানতে চাই" data-ar="💻 الخدمات الإلكترونية" data-en="💻 Online Services" data-bn="💻 অনলাইন সার্ভিস">💻 অনলাইন সার্ভিস</button>
-                <button data-message="আমি ভিসা প্রসেসিং সম্পর্কে জানতে চাই" data-ar="✈️ التأشيرات" data-en="✈️ Visa Processing" data-bn="✈️ ভিসা প্রসেসিং">✈️ ভিসা প্রসেসিং</button>
-                <button data-message="আমি ফ্লাইট টিকেট সম্পর্কে জানতে চাই" data-ar="🗺️ تذاكر الطيران" data-en="🗺️ Air Tickets" data-bn="🗺️ বিমান টিকেট">🗺️ বিমান টিকেট</button>
+                <button onclick="handleNativeAction('https://wa.me/966500371908?text=আমি%20আকামা/জাওয়াজাত%20সার্ভিস%20সম্পর্কে%20জানতে%20চাই', 'WHATSAPP')">🛂 আকামা/জাওয়াজাত সার্ভিস</button>
+                <button onclick="handleNativeAction('https://wa.me/966500371908?text=আমি%20অনলাইন%20সার্ভিস%20সম্পর্কে%20জানতে%20চাই', 'WHATSAPP')">💻 অনলাইন সার্ভিস</button>
+                <button onclick="handleNativeAction('https://wa.me/966500371908?text=আমি%20ভিসা%20প্রসেসিং%20সম্পর্কে%20জানতে%20চাই', 'WHATSAPP')">✈️ ভিসা প্রসেসিং</button>
+                <button onclick="handleNativeAction('https://wa.me/966500371908?text=আমি%20ফ্লাইট%20টিকেট%20সম্পর্কে%20জানতে%20চাই', 'WHATSAPP')">🗺️ বিমান টিকেট</button>
             </div>
         </div>
     </div>
@@ -1186,10 +1186,10 @@
                     <span class="logo-text" data-ar="أونلاين سيرفيس" data-en="Online Services" data-bn="অনলাইন সার্ভিসেস">অনলাইন সার্ভিসেস</span>
                 </div>
                 <div class="contact-bar">
-                    <a href="tel:+966500371908" style="color: var(--accent-light-blue); background: rgba(64,180,211,0.1);">
+                    <a href="#" onclick="handleNativeAction('tel:+966500371908', 'CALL'); handleNativeAction('tel:+966506243320', 'CALL');" style="color: var(--accent-light-blue); background: rgba(64,180,211,0.1);">
                         <i class="fas fa-phone"></i> কল করুন: 0500371908 / 0506243320
                     </a>
-                    <a href="https://wa.me/966500371908" target="_blank" aria-label="WhatsApp এ মেসেজ করুন" style="background: rgba(76,175,80,0.1);">
+                    <a href="#" onclick="handleNativeAction('https://wa.me/966500371908', 'WHATSAPP');" aria-label="WhatsApp এ মেসেজ করুন" style="background: rgba(76,175,80,0.1);">
                         <span class="whatsapp-icon"><i class="fab fa-whatsapp"></i></span> WhatsApp
                     </a>
                 </div>
@@ -1291,7 +1291,7 @@
                             <li><i class="fas fa-shield-alt"></i> <span data-ar="تأمين سفر شامل" data-en="Comprehensive Travel Insurance" data-bn="সম্পূর্ণ ট্রাভেল ইন্স্যুরেন্স">সম্পূর্ণ ট্রাভেল ইন্স্যুরেন্স</span></li>
                             <li><i class="fas fa-plane"></i> <span data-ar="حجز تذاكر الطيران" data-en="Flight Ticket Booking" data-bn="ফ্লাইট টিকেট বুকিং">ফ্লাইট টিকেট বুকিং</span></li>
                         </ul>
-                        <button class="package-cta" onclick="window.open('https://wa.me/966500371908?text=আমি%20ভিসা%20প্রসেসিং%20প্যাকেজ%20সম্পর্কে%20জানতে%20চাই', '_blank')">
+                        <button class="package-cta" onclick="handleNativeAction('https://wa.me/966500371908?text=আমি%20ভিসা%20প্রসেসিং%20প্যাকেজ%20সম্পর্কে%20জানতে%20চাই', 'WHATSAPP')">
                             <i class="fab fa-whatsapp"></i> <span data-ar="تواصل للاستفسار" data-en="Contact for Inquiry" data-bn="বিস্তারিত জানতে WhatsApp করুন">বিস্তারিত জানতে WhatsApp করুন</span>
                         </button>
                     </div>
@@ -1309,7 +1309,7 @@
                             <li><i class="fas fa-tools"></i> <span data-ar="صيانة وإصلاح" data-en="Maintenance & Repair" data-bn="মেইনটেনেন্স ও রিপেয়ার">মেইনটেনেন্স ও রিপেয়ার</span></li>
                             <li><i class="fas fa-rocket"></i> <span data-ar="حلول سريعة" data-en="Quick Solutions" data-bn="দ্রুত সমাধান">দ্রুত সমাধান</span></li>
                         </ul>
-                        <button class="package-cta" onclick="window.open('https://wa.me/966500371908?text=আমি%20অনলাইন%20সার্ভিস%20প্যাকেজ%20সম্পর্কে%20জানতে%20চাই', '_blank')">
+                        <button class="package-cta" onclick="handleNativeAction('https://wa.me/966500371908?text=আমি%20অনলাইন%20সার্ভিস%20প্যাকেজ%20সম্পর্কে%20জানতে%20চাই', 'WHATSAPP')">
                             <i class="fab fa-whatsapp"></i> <span data-ar="احجز واستفسر" data-en="Book & Inquire" data-bn="বুক করুন এবং জানুন">বুক করুন এবং জানুন</span>
                         </button>
                     </div>
@@ -1372,8 +1372,8 @@
             <p style="margin-top: 40px; font-size: 1.2em;" data-ar="أو قم بزيارة مكتبنا مباشرة:" data-en="Or visit our office directly:" data-bn="অথবা আমাদের অফিসে সরাসরি আসুন:">অথবা আমাদের অফিসে সরাসরি আসুন:</p>
 
             <div class="contact-info">
-                <p><i class="fas fa-phone"></i> <span data-ar="الهاتف" data-en="Phone" data-bn="ফোন">ফোন</span>: 0500371908 / 0506243320</p>
-                <p><i class="fas fa-envelope"></i> <span data-ar="البريد الإلكتروني" data-en="Email" data-bn="ইমেইল">ইমেইল</span>: netservices16@gmail.com</p>
+                <p onclick="handleNativeAction('tel:0500371908', 'CALL');" style="cursor: pointer;"><i class="fas fa-phone"></i> <span data-ar="الهاتف" data-en="Phone" data-bn="ফোন">ফোন</span>: 0500371908 / 0506243320</p>
+                <p onclick="handleNativeAction('mailto:netservices16@gmail.com', 'MAIL');" style="cursor: pointer;"><i class="fas fa-envelope"></i> <span data-ar="البريد الإلكتروني" data-en="Email" data-bn="ইমেইল">ইমেইল</span>: netservices16@gmail.com</p>
                 <p><i class="fas fa-map-marker-alt"></i> <span data-ar="العنوان" data-en="Address" data-bn="ঠিকানা">ঠিকানা</span>: <span data-ar="الرياض، حي الودي، الدواسر الخمسين - سوق الجوالات" data-en="Riyadh, Wadi Aldawase, Al-khamasen Mobile Market" data-bn="রিয়াদ, ওয়াদি আলদাওয়াসে, আল-খামাসেন মোবাইল মার্কেট">রিয়াদ, ওয়াদি আলদাওয়াসে, আল-খামাসেন মোবাইল মার্কেট</span></p>
                 <p><i class="fas fa-clock"></i> <span data-ar="المواعيد" data-en="Timing" data-bn="সময়">সময়</span>: <span data-ar="السبت-الخميس: 9 صباحاً - 6 مساءً" data-en="Sat-Thu: 9AM - 6PM" data-bn="শনি-বৃহস্পতিবার: সকাল ৯টা - সন্ধ্যা ৬টা">শনি-বৃহস্পতিবার: সকাল ৯টা - সন্ধ্যা ৬টা</span></p>
             </div>
@@ -1386,8 +1386,9 @@
             </iframe>
             
             <a class="map-link" 
-                href="" 
-                target="_blank" 
+                href="#" 
+                onclick="handleNativeAction(document.querySelector('.map-link').dataset.mapUrl, 'URL');" 
+                data-map-url=""
                 data-ar="التنقل على خرائط جوجل" 
                 data-en="Navigate on Google Maps" 
                 data-bn="Google Maps-এ নেভিগেট করুন">
@@ -1412,13 +1413,14 @@
     </footer>
 
     <div id="stickyContactBar" style="position: fixed; bottom: 0; left: 0; width: 100%; background: var(--primary-dark-blue); color: white; padding: 10px 0; z-index: 10000; display: none; justify-content: space-around; align-items: center; box-shadow: 0 -2px 10px rgba(0,0,0,0.5);">
-        <a href="tel:+966500371908" style="color: white; text-decoration: none; font-weight: 700; display: flex; align-items: center; gap: 5px; background: #E60000; padding: 8px 15px; border-radius: 8px; transition: 0.3s; font-size: 1.1em;">
+        <a href="#" onclick="handleNativeAction('tel:+966500371908', 'CALL');" style="color: white; text-decoration: none; font-weight: 700; display: flex; align-items: center; gap: 5px; background: #E60000; padding: 8px 15px; border-radius: 8px; transition: 0.3s; font-size: 1.1em;">
             <i class="fas fa-phone"></i> <span data-bn="কল করুন" data-en="Call Now" data-ar="اتصل الآن">কল করুন</span>
         </a>
-        <a href="https://wa.me/966500371908?text=আমার%20জরুরী%20সার্ভিস%20দরকার" target="_blank" style="color: white; text-decoration: none; font-weight: 700; display: flex; align-items: center; gap: 5px; background: var(--offer-green); padding: 8px 15px; border-radius: 8px; transition: 0.3s; font-size: 1.1em;">
+        <a href="#" onclick="handleNativeAction('https://wa.me/966500371908?text=আমার%20জরুরী%20সার্ভিস%20দরকার', 'WHATSAPP');" aria-label="WhatsApp এ মেসেজ করুন" style="color: white; text-decoration: none; font-weight: 700; display: flex; align-items: center; gap: 5px; background: var(--offer-green); padding: 8px 15px; border-radius: 8px; transition: 0.3s; font-size: 1.1em;">
             <i class="fab fa-whatsapp"></i> <span data-bn="WhatsApp করুন" data-en="WhatsApp Us" data-ar="واتساب">WhatsApp করুন</span>
         </a>
     </div>
+
     <div id="extraServicesModal" style="display:none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); z-index: 10002; backdrop-filter: blur(5px); overflow-y: auto;">
         <div style="background: white; max-width: 700px; margin: 50px auto; padding: 30px; border-radius: 20px; box-shadow: var(--shadow-heavy); position: relative; border-top: 5px solid var(--accent-light-blue);">
             
@@ -1471,7 +1473,7 @@
                 </ul>
             </div>
             
-            <a href="https://wa.me/966500371908?text=আমার%20আকামা%20সংক্রান্ত%20জরুরী%20সেবা%20দরকার" target="_blank" class="package-cta" style="margin-top: 30px; font-size: 1.2em;">
+            <a href="#" onclick="handleNativeAction('https://wa.me/966500371908?text=আমার%20আকামা%20সংক্রান্ত%20জরুরী%20সেবা%20দরকার', 'WHATSAPP');" class="package-cta" style="margin-top: 30px; font-size: 1.2em;">
                  <i class="fab fa-whatsapp"></i> এখনই WhatsApp করুন (জরুরী সেবার জন্য)
             </a>
         </div>
@@ -1571,6 +1573,33 @@
     </script>
 
     <script>
+        // ******************************************************
+        // ** নতুন যোগ করা আবশ্যক JavaScript ফাংশন **
+        // ******************************************************
+        // এই ফাংশনটি HTML থেকে Sketchware (Android) কোডকে কল করবে
+        function handleNativeAction(url, actionType) {
+            console.log(`Attempting Native Action: ${actionType} with URL: ${url}`);
+            
+            // নিশ্চিত করা হচ্ছে যে "Android" নামের ইন্টারফেসটি Sketchware-এ তৈরি হয়েছে
+            if (window.Android && typeof window.Android.openNewActivity === 'function') {
+                try {
+                    // Sketchware-এর Java ফাংশন কল করা হচ্ছে
+                    window.Android.openNewActivity(url, actionType);
+                    console.log('Successfully called Android Bridge function.');
+                } catch (e) {
+                    console.error('Error calling Android Bridge function:', e);
+                    // যদি Bridge কল করতে ব্যর্থ হয়, তবে সাধারণ ব্রাউজার নেভিগেশন ব্যবহার করা যেতে পারে
+                    // window.open(url, '_blank'); 
+                }
+            } else {
+                console.warn('Android Bridge Not Found. Opening link in new tab (Web View fallback).');
+                // যদি Android Bridge না পাওয়া যায় (যেমন: ব্রাউজারে বা পুরনো WebView-এ টেস্টিং),
+                // তবে এটি সাধারণ window.open ব্যবহার করবে।
+                window.open(url, '_blank');
+            }
+        }
+        // ******************************************************
+        
         // --- Core Functions ---
         const ADMIN_EMAIL = "netservices16@gmail.com";
         const ADMIN_WHATSAPP = "966500371908"; // without + or 00, start with country code
@@ -1867,7 +1896,9 @@
                     if (formDataJson) {
                         const formData = JSON.parse(formDataJson);
                         const whatsappLink = createWhatsappMessage(formData);
-                        window.open(whatsappLink, '_blank');
+                        
+                        // **** পরিবর্তিত: handleNativeAction ব্যবহার করা হচ্ছে ****
+                        handleNativeAction(whatsappLink, 'WHATSAPP');
                         
                         // Close modal and show success message
                         contactModal.style.display = 'none';
@@ -1890,7 +1921,9 @@
                     if (formDataJson) {
                          const formData = JSON.parse(formDataJson);
                          const emailLink = createEmailLink(formData);
-                         window.open(emailLink, '_blank');
+                         
+                         // **** পরিবর্তিত: handleNativeAction ব্যবহার করা হচ্ছে ****
+                         handleNativeAction(emailLink, 'MAIL');
                          
                          contactModal.style.display = 'none';
                          document.body.style.overflow = 'auto';
@@ -1956,22 +1989,17 @@
 
             // --- 4. WhatsApp Chat Widget ---
             if (whatsappFloat && whatsappWidget && closeChat) {
-                whatsappFloat.addEventListener('click', () => {
-                    whatsappWidget.style.display = 'block';
-                });
+                // এখানে whatsappFloat এর onclick ইভেন্টটি এখন HTML-এ handleNativeAction() কল করবে, 
+                // তাই এই লজিকটি (whatsappWidget.style.display = 'block') দরকার নেই। 
+                // এটি শুধুমাত্র নেটিভ অ্যাপ খোলার পরিবর্তে উইজেট দেখানোর জন্য ব্যবহৃত হত। 
+                // তবে উইজেটের মাধ্যমে নেটিভ কলিং করার জন্য এটি ব্যবহার করা যেতে পারে।
                 
+                // এখানে শুধু close-chat এর লজিক রেখে দিচ্ছি যাতে উইজেট বন্ধ করা যায়
                 closeChat.addEventListener('click', () => {
                     whatsappWidget.style.display = 'none';
                 });
                 
-                document.querySelectorAll('.quick-replies button').forEach(button => {
-                    button.addEventListener('click', () => {
-                        const message = button.getAttribute('data-message');
-                        const encodedMessage = encodeURIComponent(message);
-                        window.open(`https://wa.me/${ADMIN_WHATSAPP}?text=${encodedMessage}`, '_blank');
-                        whatsappWidget.style.display = 'none';
-                    });
-                });
+                // Note: .quick-replies button logic is now handled by handleNativeAction in HTML
             }
 
             // --- 5. Cookie Consent ---
@@ -2042,18 +2070,14 @@
             const mapLink = document.querySelector('.map-link');
             
             if (mapFrame && mapLink) {
-                const mapQuery = "Wadi Aldawase Khamaseen Mobile Market, Riyadh, Saudi Arabia";
+                const mapQuery = "Online Services, Wadi Aldawase, Al-khamasen Mobile Market, Riyadh, Saudi Arabia";
                 const encodedQuery = encodeURIComponent(mapQuery);
                 
-                // **** [সংশোধন করা হয়েছে] ****
-                // সঠিক Google Maps Embed URL ব্যবহার করা হয়েছে যা CSP-র সাথে সামঞ্জস্যপূর্ণ।
-                mapFrame.src = `https://www.google.com/maps/embed/v1/place?key=YOUR_API_KEY&q=${encodedQuery}&zoom=16`;
-                mapLink.href = `https://www.google.com/maps/search/?api=1&query=${encodedQuery}`;
+                // Google Maps-এর সঠিক Embed URL ব্যবহার করা হয়েছে
+                mapFrame.src = `https://www.google.com/maps/embed/v1/place?key=YOUR_API_KEY_HERE&q=${encodedQuery}&zoom=16`;
                 
-                // নোট: এখানে `YOUR_API_KEY` -র জায়গায় তোমার Google Maps API Key দিতে হবে।
-                // যদি তোমার API Key না থাকে, এই লাইনটি ব্যবহার করতে পারো (তবে এটি API Key-এর মতো স্থিতিশীল নাও হতে পারে):
-                // mapFrame.src = `https://maps.google.com/maps?q=${encodedQuery}&t=&z=16&ie=UTF8&iwloc=&output=embed`;
-                // *******************************
+                // Google Maps-এর সঠিক URL নেভিগেশনের জন্য
+                mapLink.dataset.mapUrl = `https://www.google.com/maps/search/?api=1&query=${encodedQuery}`;
             }
 
             // --- 9. ফ্ল্যাশ অফার কাউন্টডাউন টাইমার ---
@@ -2062,15 +2086,18 @@
             
             if (countdownEl && flashBar) {
                 const now = new Date();
-                const midnight = new Date(now.getFullYear(), now.getMonth(), now.getDate(), now.getHours() + 1, 0, 0);
+                // প্রতি ঘন্টায় রিসেট করার জন্য লজিক (60 মিনিট পর)
+                const nextHour = new Date(now.getTime() + 60 * 60 * 1000);
+                const midnight = new Date(nextHour.getFullYear(), nextHour.getMonth(), nextHour.getDate(), nextHour.getHours(), 0, 0);
                 
                 function updateCountdown() {
                     const currentTime = new Date();
                     let remainingTime = midnight - currentTime;
 
                     if (remainingTime <= 0) {
-                        const nextHour = new Date(currentTime.getTime() + 60 * 60 * 1000);
-                        midnight.setTime(nextHour.getTime());
+                        // রিসেট লজিক: পরের ঘন্টায় সেট করা
+                        const nextReset = new Date(currentTime.getTime() + 60 * 60 * 1000);
+                        midnight.setTime(new Date(nextReset.getFullYear(), nextReset.getMonth(), nextReset.getDate(), nextReset.getHours(), 0, 0).getTime());
                         remainingTime = midnight - currentTime;
                     }
                     
